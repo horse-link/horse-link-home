@@ -10,8 +10,15 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
       <div className=" flex flex-row gap-3 text-center">
-        <h1 className="p-2">Docs</h1>
-        <h1 className="p-2 mr-3">Twitter</h1>
+        <a className="p-2" href="https://github.com/horse-link/horse.link">
+          Docs
+        </a>
+        <a
+          className="p-2 mr-3"
+          href="https://twitter.com/HorseLinkETH?s=20&t=DJPYHgWrWrx88wT0Y7ITkw"
+        >
+          Twitter
+        </a>
       </div>
       <div className=" flex flex-row gap-3 text-center p-4">
         <BaseButton className="h-10">Sign Up</BaseButton>
