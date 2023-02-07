@@ -10,5 +10,15 @@ module.exports = {
       }
     }
   },
-  plugins: [require("tailwind-heropatterns")({})]
+  plugins: [
+    require("tailwind-heropatterns")({
+      patterns: ["houndstooth"],
+      colors: {
+        default: "rgb(28,160,129)"
+      },
+      opacity: {
+        default: "0.4"
+      }
+    })
+  ]
 };
