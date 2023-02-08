@@ -2,7 +2,7 @@ import { BaseButton } from "./Button";
 import horse from "../assets/horse.png";
 export const Navbar: React.FC = () => {
   return (
-    <div className="fixed shadow-2xl bg-white w-screen max-w-[100vw] max-h-[9vh] inline-flex items-center justify-center rounded-md">
+    <div className="fixed shadow-2xl bg-white w-screen max-w-[100vw] inline-flex items-center justify-center rounded-md">
       <div className="flex flex-row flex-1">
         <img alt="logo" className="m-8 h-11 md:h-15" src={horse} />
         <div className="-ml-10">
