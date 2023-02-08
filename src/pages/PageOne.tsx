@@ -31,7 +31,14 @@ const PageOne: React.FC = () => (
             </h1>
           </div>
           <div className="flex flex-row justify-center">
-            <BaseButton className="mt-5 w-[200px]">Get Started</BaseButton>
+            <BaseButton
+              onClick={_event =>
+                (window.location.href = "https://alpha.horse.link/signup")
+              }
+              className="mt-5 w-[200px]"
+            >
+              Get Started
+            </BaseButton>
           </div>
         </div>
       </div>
@@ -59,7 +66,14 @@ const PageOne: React.FC = () => (
       ></Card>
     </div>
     <div className="flex flex-row justify-center">
-      <BaseButton className="mt-5 mb-10 w-[200px]">Get 1000 HL</BaseButton>
+      <BaseButton
+        onClick={_event =>
+          (window.location.href = "https://alpha.horse.link/signup")
+        }
+        className="mt-5 mb-10 w-[200px]"
+      >
+        Get 1000 HL
+      </BaseButton>
     </div>
   </>
 );
