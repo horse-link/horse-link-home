@@ -6,8 +6,8 @@ type Props = {
 };
 
 export const PageLayout: React.FC<Props> = ({ children }) => (
-  <div className="lg:w-screen lg:h-screen lg:max-w-[100vw] lg:max-h-[50vh] bg-[#1CB981] bg-hero-houndstooth pb-5">
+  <div className="bg-emerald-500 bg-hero-houndstooth">
     <Navbar />
-    {children}
+    <div className="pt-20">{children}</div>
   </div>
 );
