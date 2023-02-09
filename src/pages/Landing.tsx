@@ -1,7 +1,7 @@
 import React from "react";
 import { PageLayout } from "../components";
 import { BaseButton } from "../components/Button";
-import { Bitcoin, Horse, Eth, Friend, Bank, hlTitle } from "../assets";
+import { Bitcoin, Horse, Eth, Friend, Bank, title } from "../assets";
 import { InfoCard } from "../components/InfoCard";
 
 const Landing: React.FC = () => (
@@ -19,7 +19,7 @@ const Landing: React.FC = () => (
             with
           </h2>
           <div className="place-self-center	">
-            <img alt="Horse Link Title" src={hlTitle} />
+            <img alt="Horse Link Title" src={title} />
           </div>
           <div className="flex justify-center mt-4">
             <BaseButton
