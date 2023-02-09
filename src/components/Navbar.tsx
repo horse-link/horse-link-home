@@ -15,7 +15,7 @@ export const Navbar: React.FC = () => (
       <a
         target="_blank"
         rel="noreferrer noopener"
-        href="https://github.com/horse-link/horse.link"
+        href="https://github.com/horse-link"
       >
         Docs
       </a>
@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => (
       <BaseButton
         onClick={() =>
           window.open(
-            "https://alpha.horse.link/login",
+            "https://alpha.horse.link/signup",
             "_blank",
             "noopener noreferrer"
           )
