@@ -2,7 +2,7 @@ import React from "react";
 import { PageLayout } from "../components";
 import { BaseButton } from "../components/Button";
 import { Bitcoin, Horse, Eth, Friend, Bank } from "../assets";
-import { Card } from "../components/Card";
+import { InfoCard } from "../components/InfoCard";
 
 const Landing: React.FC = () => (
   <PageLayout>
@@ -45,7 +45,7 @@ const Landing: React.FC = () => (
       </h3>
       <div className="w-full flex justify-center pt-12">
         <div className="w-3/4 flex flex-col lg:flex-row lg:justify-center gap-y-12 gap-x-32">
-          <Card>
+          <InfoCard>
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
               Exchange
             </h2>
@@ -55,8 +55,8 @@ const Landing: React.FC = () => (
               alt="Ethereum symbol"
               className="h-[4rem] lg:h-[8rem] mt-10 mb-6"
             />
-          </Card>
-          <Card>
+          </InfoCard>
+          <InfoCard>
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
               Refer a friend
             </h2>
@@ -66,8 +66,8 @@ const Landing: React.FC = () => (
               alt="Friend symbol"
               className="h-[4rem] lg:h-[8rem] mt-10 mb-6"
             />
-          </Card>
-          <Card>
+          </InfoCard>
+          <InfoCard>
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
               Vault
             </h2>
@@ -77,7 +77,7 @@ const Landing: React.FC = () => (
               alt="Vault symbol"
               className="h-[4rem] lg:h-[8rem] mt-10 mb-6"
             />
-          </Card>
+          </InfoCard>
         </div>
       </div>
     </div>
