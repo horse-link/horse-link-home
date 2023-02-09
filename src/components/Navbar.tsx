@@ -10,6 +10,7 @@ export const Navbar: React.FC = () => {
           height={8}
           width={50}
           src={horse}
+        />
         <div className="-ml-10">
           <h1 className="text-center mt-1 p-10 lg:text-2xl text-xs flex-nowrap">
             Horse : Link
