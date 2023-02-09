@@ -13,7 +13,7 @@ type Props = {
 
 export const Card: React.FC<Props> = ({ title, data, imageData }) => (
   <div>
-    <div className="w-80 h-80 overflow-hidden rounded-lg bg-[#1CB981] py-1 sm:p-5 shadow-lg">
+    <div className="w-80 h-80 overflow-hidden rounded-lg bg-[#1CB981] py-1 sm:p-5 shadow-lg pt-10">
       <dt className="font-medium bold text-indigo-600 text-center text-3xl">
         {title}
       </dt>
