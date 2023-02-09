@@ -15,7 +15,7 @@ export const Navbar: React.FC = () => (
       <a
         target="_blank"
         rel="noreferrer noopener"
-        href="https://github.com/horse-link/horse.link"
+        href="https://github.com/horse-link"
       >
         Docs
       </a>
