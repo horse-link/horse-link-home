@@ -1,7 +1,7 @@
 import React from "react";
 import { PageLayout } from "../components";
 import { BaseButton } from "../components/Button";
-import { Bitcoin, Horse, Eth, Friend, Bank } from "../assets";
+import { Bitcoin, Horse, Eth, Friend, Bank, hlTitle } from "../assets";
 import { InfoCard } from "../components/InfoCard";
 
 const Landing: React.FC = () => (
@@ -10,7 +10,7 @@ const Landing: React.FC = () => (
       <div className="flex items-center gap-x-32">
         <div className="flex flex-col text-center">
           <h2 className="text-4xl lg:text-8xl font-bold">
-            Win <span className="text-indigo-600">$5000</span>
+            Win <span className="text-indigo-600">0.1 BTC</span>
             <img
               src={Bitcoin}
               alt="Bitcoin symbol"
@@ -18,9 +18,9 @@ const Landing: React.FC = () => (
             />{" "}
             with
           </h2>
-          <h1 className="text-6xl mt-1 lg:mt-0 lg:text-[9rem] lg:leading-[9rem]">
-            Horse <span className="text-white">: Link</span>
-          </h1>
+          <div className="place-self-center	">
+            <img alt="Horse Link Title" src={hlTitle} />
+          </div>
           <div className="flex justify-center mt-4">
             <BaseButton
               className="!w-auto lg:!px-8 lg:!py-4 mt-2 lg:mt-0"
@@ -60,7 +60,7 @@ const Landing: React.FC = () => (
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
               Refer a friend
             </h2>
-            <p className="mt-4">Refer a friend and receive 100 $HL</p>
+            <p className="mt-4">Refer a friend and receive 100 HL</p>
             <img
               src={Friend}
               alt="Friend symbol"
