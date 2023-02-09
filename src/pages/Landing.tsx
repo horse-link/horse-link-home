@@ -18,7 +18,7 @@ const Landing: React.FC = () => (
             />{" "}
             with
           </h2>
-          <div className="place-self-center	">
+          <div className="place-self-center">
             <img alt="Horse Link Title" src={title} />
           </div>
           <div className="flex justify-center mt-4">
