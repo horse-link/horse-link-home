@@ -43,7 +43,7 @@ const Landing: React.FC = () => (
       <h3 className="w-full text-center font-semibold text-3xl lg:text-6xl">
         Horse : Link <span className="text-emerald-500">benefits</span>
       </h3>
-      <p className="w-full text-center font-semibold">Horse Link is an Ethereum AMM protocol that allows participants to wager on sports markets using ERC20 tokens.</p>
+      <p className="w-full text-center font-semibold">HorseLink is a token-powered liquidity platform that connects lenders, bookkeepers, punters and speculators together.</p>
       <div className="w-full flex justify-center pt-12">
         <div className="w-3/4 flex flex-col lg:flex-row lg:justify-center gap-y-12 gap-x-32">
           <InfoCard>
