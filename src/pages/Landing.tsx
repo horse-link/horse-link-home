@@ -43,13 +43,14 @@ const Landing: React.FC = () => (
       <h3 className="w-full text-center font-semibold text-3xl lg:text-6xl">
         Horse : Link <span className="text-emerald-500">benefits</span>
       </h3>
+      <p className="w-full text-center font-semibold">Horse Link is an Ethereum AMM protocol that allows participants to wager on sports markets using ERC20 tokens.</p>
       <div className="w-full flex justify-center pt-12">
         <div className="w-3/4 flex flex-col lg:flex-row lg:justify-center gap-y-12 gap-x-32">
           <InfoCard>
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
               Exchange
             </h2>
-            <p className="mt-4">Get a return on your wager</p>
+            <p className="mt-4">Smart contract guaranteed settlement.</p>
             <img
               src={Eth}
               alt="Ethereum symbol"
@@ -60,7 +61,7 @@ const Landing: React.FC = () => (
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
               Refer a friend
             </h2>
-            <p className="mt-4">Refer a friend and receive 100 HL</p>
+            <p className="mt-4">Refer a friend and receive 100 HL.</p>
             <img
               src={Friend}
               alt="Friend symbol"
@@ -69,9 +70,9 @@ const Landing: React.FC = () => (
           </InfoCard>
           <InfoCard>
             <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
-              Vault
+              ERC4626 Vaults
             </h2>
-            <p className="mt-4">Earn when you deposit into a vault</p>
+            <p className="mt-4">Earn yield by deposting liquidty.</p>
             <img
               src={Bank}
               alt="Vault symbol"
