@@ -21,5 +21,12 @@ export const validateSignupData = (data: SignupData) => {
 };
 
 // TODO: add regex validation for code (4 characters, alphanumeric)
-// export const validateCode = (code: string) => true;
+export const validateCode = (data: any) => {
+  const { code } = data;
+  // code validation
+  const codeRegex = new RegExp(/^[a-zA-Z0-9]{4}$/);
 
+  if (!codeRegex.test(code)) return false;
+
+  return true;
+};
