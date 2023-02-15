@@ -1,6 +1,6 @@
 import { Horse } from "../assets";
 import { Link, useNavigate } from "react-router-dom";
-import { BaseButton } from "./Button";
+import { Button } from "./Button";
 
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -30,12 +30,12 @@ export const Navbar: React.FC = () => {
         >
           Twitter
         </a>
-        <BaseButton
+        <Button
           className="!whitespace-nowrap"
           onClick={() => navigate("/signup")}
         >
           Sign Up
-        </BaseButton>
+        </Button>
       </div>
     </div>
   );

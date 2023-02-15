@@ -1,71 +1,83 @@
 import React, { useState } from "react";
 import api from "../api/api";
-import { PageLayout } from "../components";
-import { BaseButton } from "../components/Button";
+import { PageLayout, Button, Loader, Input } from "../components";
 import { Horse } from "../assets";
-import { Loader } from "../components/Loader";
 import utils from "../utils";
 
 const Verify: React.FC = () => {
   const [loading, setLoading] = useState(false);
-  const [msg, setMsg] = useState<string>();
+  const [error, setError] = useState(false);
+  const [verified, setVerified] = useState(false);
   const [code, setCode] = useState("");
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!utils.validation.validateCode(code)) return;
 
+    setVerified(false);
+    setError(false);
     setLoading(true);
-    setMsg(undefined);
 
     try {
-      const res = await api.verify(code);
-      setMsg(res);
+      // will throw if fails
+      await api.verify(code);
+      setVerified(true);
+
+      // navigate after 3 seconds
+      setTimeout(
+        () => window.location.assign("https://alpha.horse.link"),
+        3000
+      );
     } catch (e) {
       console.error(e);
+      // we know what the error will be, so we just have a flag here
+      setError(true);
     } finally {
-      window.location.replace("https://alpha.horse.link/dashboard");
       setLoading(false);
-      console.log(msg);
     }
   };
 
+  const changeCode = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setCode(e.currentTarget.value);
+
   return (
     <PageLayout>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="flex flex-col items-center mt-10">
-          <img
-            loading="lazy"
-            alt="Horse"
-            src={Horse}
-            className="mb-10 h-[5rem] w-[7rem] justify-center"
-          />
-          <h1 className="text-md mb-5 break-all text-center font-bold lg:w-[40rem] lg:text-3xl">
-            Enter code recieved via SMS
-          </h1>
-          <div className="flex w-[20rem] flex-col lg:w-[30rem]">
-            <h1 className="my-4 font-bold">Earn $100 USDT (Goerli)</h1>
-            <form onSubmit={submit}>
-              <input
-                type="text"
-                placeholder="SMS Verification Code"
-                value={code}
-                onChange={e => setCode(e.target.value)}
-                className="mb-6 w-[20rem] rounded-md border-b-[0.12rem] border-black pl-1 pt-1 transition-colors duration-100 disabled:bg-white disabled:text-black/50 lg:w-[30rem]"
-              />
-              <BaseButton type="submit" className="w-[20rem] lg:w-[30rem]">
-                Verify
-              </BaseButton>
-            </form>
-            <h1 className="my-5 mb-10">
-              Invite friends, claim more HL tokens, and win big with 0.2 BTC up
-              for grabs for the top players.
-            </h1>
-          </div>
+      <div className="flex flex-col items-center mt-10">
+        <img
+          alt="Horse Link logo"
+          src={Horse}
+          className="mb-10 h-[5rem] w-[7rem]"
+        />
+        <h1 className="mb-2 text-center font-bold lg:w-[50rem] lg:text-3xl">
+          Verify your details
+        </h1>
+        <h2 className="mb-5 text-center lg:w-[50rem]">
+          Once you enter your code you&apos;ll be given 100 Horse Link tokens
+        </h2>
+        <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
+          <form onSubmit={submit} className="mb-10">
+            <label>Verification code</label>
+            <Input placeholder="Code" value={code} onChange={changeCode} />
+            <Button
+              type="submit"
+              className="w-[20rem] lg:w-[30rem]"
+              disabled={loading || !code}
+            >
+              {loading ? <Loader color="white" /> : "Verify"}
+            </Button>
+          </form>
+          {verified && (
+            <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
+              Successfully verified, redirecting to Horse Link...
+            </div>
+          )}
+          {error && (
+            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+              This user has already verified with Horse Link
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </PageLayout>
   );
 };

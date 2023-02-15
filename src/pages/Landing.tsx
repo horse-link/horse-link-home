@@ -1,8 +1,6 @@
 import React from "react";
-import { PageLayout } from "../components";
-import { BaseButton } from "../components/Button";
+import { PageLayout, Button, InfoCard } from "../components";
 import { Bitcoin, Horse, Eth, Friend, Bank, Title } from "../assets";
-import { InfoCard } from "../components/InfoCard";
 import { useNavigate } from "react-router-dom";
 
 const Landing: React.FC = () => {
@@ -26,12 +24,12 @@ const Landing: React.FC = () => {
               <img alt="Horse Link Title" src={Title} />
             </div>
             <div className="flex justify-center mt-4">
-              <BaseButton
+              <Button
                 className="!w-auto lg:!px-8 lg:!py-4 mt-2 lg:mt-0"
                 onClick={() => navigate("/signup")}
               >
                 Get Started
-              </BaseButton>
+              </Button>
             </div>
           </div>
           <img src={Horse} className="h-[30rem] lg:block hidden" />

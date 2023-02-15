@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import api from "../api/api";
-import { PageLayout } from "../components";
-import { BaseButton } from "../components/Button";
+import { Input, PageLayout, Button } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Loader } from "../components/Loader";
 import { useNavigate } from "react-router-dom";
 
 const Signup: React.FC = () => {
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState<string>();
+  const [error, setError] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
-  const navigate = useNavigate();
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,69 +21,82 @@ const Signup: React.FC = () => {
       return;
 
     setMsg(undefined);
+    setError(false);
     setLoading(true);
 
     try {
       const res = await api.register(phoneNumber, walletAddress);
       setMsg(res);
+
+      // navigate after 3 seconds
+      setTimeout(() => navigate("/verify"), 3000);
     } catch (e) {
       console.error(e);
+      // we know what the error will be, so we just have a flag here
+      setError(true);
     } finally {
-      navigate("/verify", {
-        replace: true
-      });
       setLoading(false);
-      console.log(msg);
     }
   };
 
+  const changePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setPhoneNumber(e.currentTarget.value);
+
+  const changeWalletAddress = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setWalletAddress(e.currentTarget.value);
+
+  const hasEnteredInfo = !!phoneNumber && !!walletAddress;
+
   return (
     <PageLayout>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="flex flex-col items-center mt-10">
-          <img
-            loading="lazy"
-            alt="Horse"
-            src={Horse}
-            className="mb-10 h-[5rem] w-[7rem] justify-center"
-          />
-          <h1 className="text-md mb-5 break-all text-center font-bold lg:w-[50rem] lg:text-3xl">
-            Invite Friends, Claim More HL Token, and Win Big with 5k in Bitcoin
-            up for Grabs for the Top Players
-          </h1>
-          <div className="flex w-[20rem] flex-col lg:w-[30rem]">
-            <h1 className="my-4 font-bold">Final Step</h1>
-            <h1 className="my-2">Phone</h1>
-            <form onSubmit={submit}>
-              <input
-                type="number"
-                placeholder="Mobile/ Cell"
-                value={phoneNumber}
-                onChange={e => setPhoneNumber(e.target.value)}
-                className="mb-6 w-[20rem] rounded-md border-b-[0.12rem] border-black pl-1 pt-1 transition-colors duration-100 disabled:bg-white disabled:text-black/50 lg:w-[30rem]"
-              />
-              <h1 className="my-2">Wallet Address</h1>
-              <input
-                type="text"
-                placeholder="Your Wallet Address"
-                value={walletAddress}
-                onChange={e => setWalletAddress(e.target.value)}
-                className="mb-6 w-[20rem] rounded-md border-b-[0.12rem] border-black pl-1 pt-1 transition-colors duration-100 disabled:bg-white disabled:text-black/50 lg:w-[30rem]"
-              />
-
-              <BaseButton type="submit" className="w-[20rem] lg:w-[30rem]">
-                Signup
-              </BaseButton>
-            </form>
-            <h1 className="my-5 mb-10">
-              Invite friends, claim more HL tokens, and win big with 0.2 BTC up
-              for grabs for the top players.
-            </h1>
-          </div>
+      <div className="flex flex-col items-center mt-10">
+        <img
+          alt="Horse Link logo"
+          src={Horse}
+          className="mb-10 h-[5rem] w-[7rem]"
+        />
+        <h1 className="mb-2 text-center font-bold lg:w-[50rem] lg:text-3xl">
+          Register for Horse Link
+        </h1>
+        <h2 className="mb-5 text-center lg:w-[50rem]">
+          Invite your friends to claim more Horse Link tokens, and compete for a
+          chance to win 0.2 BTC
+        </h2>
+        <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
+          <form onSubmit={submit} className="mb-10">
+            <label>Phone number</label>
+            <Input
+              type="tel"
+              placeholder="Phone Number"
+              value={phoneNumber}
+              onChange={changePhoneNumber}
+            />
+            <label>Wallet address</label>
+            <Input
+              placeholder="0x0000000..."
+              value={walletAddress}
+              onChange={changeWalletAddress}
+            />
+            <Button
+              type="submit"
+              className="w-[20rem] lg:w-[30rem]"
+              disabled={loading || !hasEnteredInfo}
+            >
+              {loading ? <Loader color="white" /> : "Sign Up"}
+            </Button>
+          </form>
+          {msg && (
+            <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
+              {msg}, redirecting...
+            </div>
+          )}
+          {error && (
+            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+              This user has already registered for the Horse Link Alpha
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </PageLayout>
   );
 };
