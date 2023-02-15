@@ -5,7 +5,7 @@ export type AppPath = `/${string}`;
 
 export type AppRoute = {
   path: AppPath;
-  element: ReactNode;
+  element?: ReactNode;
   props?: RouteProps;
 };
 

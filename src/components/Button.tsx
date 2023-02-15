@@ -8,7 +8,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   baseStyleOverride?: boolean;
 };
 
-export const BaseButton: React.FC<Props> = props => {
+export const Button: React.FC<Props> = props => {
   const {
     className,
     title,
@@ -29,7 +29,7 @@ export const BaseButton: React.FC<Props> = props => {
   return (
     <button
       className={classnames("text-sm font-medium text-white", className, {
-        "opacity-50": disabled,
+        "opacity-50 hover:bg-indigo-600": disabled,
         [baseButtonStyles]: !baseStyleOverride
       })}
       disabled={loading || disabled}
