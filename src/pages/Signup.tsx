@@ -55,12 +55,13 @@ const Signup: React.FC = () => {
           src={Horse}
           className="mb-10 h-[5rem] w-[7rem]"
         />
-        <h1 className="mb-2 text-center font-bold lg:w-[50rem] lg:text-3xl">
-          Register for Horse Link
+        <h1 className="mb-3 text-center font-bold lg:w-[50rem] text-3xl">
+          Register for the Horse Link Tournament for your chance to win 0.2
+          BTC!!!
         </h1>
-        <h2 className="mb-5 text-center lg:w-[50rem]">
-          Invite your friends to claim more Horse Link tokens, and compete for a
-          chance to win 0.2 BTC
+        <h2 className="mb-5 text-center w-[20rem] lg:w-[30rem]">
+          For each friend you invite, receive a 10% larger starting balance to
+          increase your chances of winning
         </h2>
         <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
           <form onSubmit={submit} className="mb-10">

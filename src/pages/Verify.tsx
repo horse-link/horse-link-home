@@ -48,11 +48,12 @@ const Verify: React.FC = () => {
           src={Horse}
           className="mb-10 h-[5rem] w-[7rem]"
         />
-        <h1 className="mb-2 text-center font-bold lg:w-[50rem] lg:text-3xl">
+        <h1 className="mb-3 text-center font-bold lg:w-[50rem] text-3xl">
           Verify your details
         </h1>
-        <h2 className="mb-5 text-center lg:w-[50rem]">
-          Once you enter your code you&apos;ll be given 100 Horse Link tokens
+        <h2 className="mb-5 text-center w-[20rem] lg:w-[30rem]">
+          Enter your code and receive 100 Horse Link tokens to use for the
+          tournament
         </h2>
         <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
           <form onSubmit={submit} className="mb-10">
