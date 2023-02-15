@@ -21,11 +21,12 @@ const Verify: React.FC = () => {
     try {
       const res = await api.verify(code);
       setMsg(res);
-      console.log(res);
     } catch (e) {
       console.error(e);
     } finally {
+      window.location.replace("https://alpha.horse.link/dashboard");
       setLoading(false);
+      console.log(msg);
     }
   };
 
@@ -46,12 +47,7 @@ const Verify: React.FC = () => {
           </h1>
           <div className="flex w-[20rem] flex-col lg:w-[30rem]">
             <h1 className="my-4 font-bold">Earn $100 USDT (Goerli)</h1>
-            <form
-              onSubmit={e => {
-                e.preventDefault();
-                submit(e);
-              }}
-            >
+            <form onSubmit={submit}>
               <input
                 type="text"
                 placeholder="SMS Verification Code"

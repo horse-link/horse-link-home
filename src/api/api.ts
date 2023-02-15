@@ -13,7 +13,7 @@ class Api {
 
   public async register(phoneNumber: string, walletAddress: string) {
     const { data: registerResponse } = await this.client.post<string>(
-      "/register",
+      "/mobile/register",
       {
         phoneNumber,
         walletAddress
@@ -24,9 +24,12 @@ class Api {
   }
 
   public async verify(code: string) {
-    const { data: verifyResponse } = await this.client.post<string>("/verify", {
-      code
-    });
+    const { data: verifyResponse } = await this.client.post<string>(
+      "/mobile/verify",
+      {
+        code
+      }
+    );
 
     return verifyResponse;
   }

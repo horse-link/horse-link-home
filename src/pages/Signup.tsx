@@ -5,12 +5,14 @@ import { BaseButton } from "../components/Button";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Loader } from "../components/Loader";
+import { useNavigate } from "react-router-dom";
 
 const Signup: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState<string>();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
+  const navigate = useNavigate();
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,11 +25,14 @@ const Signup: React.FC = () => {
     try {
       const res = await api.register(phoneNumber, walletAddress);
       setMsg(res);
-      console.log(res);
     } catch (e) {
       console.error(e);
     } finally {
+      navigate("/verify", {
+        replace: true
+      });
       setLoading(false);
+      console.log(msg);
     }
   };
 
@@ -50,12 +55,7 @@ const Signup: React.FC = () => {
           <div className="flex w-[20rem] flex-col lg:w-[30rem]">
             <h1 className="my-4 font-bold">Final Step</h1>
             <h1 className="my-2">Phone</h1>
-            <form
-              onSubmit={e => {
-                e.preventDefault();
-                submit(e);
-              }}
-            >
+            <form onSubmit={submit}>
               <input
                 type="number"
                 placeholder="Mobile/ Cell"
