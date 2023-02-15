@@ -64,19 +64,23 @@ const Signup: React.FC = () => {
         </h2>
         <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
           <form onSubmit={submit} className="mb-10">
-            <label>Phone number</label>
-            <Input
-              type="tel"
-              placeholder="Phone Number"
-              value={phoneNumber}
-              onChange={changePhoneNumber}
-            />
-            <label>Wallet address</label>
-            <Input
-              placeholder="0x0000000..."
-              value={walletAddress}
-              onChange={changeWalletAddress}
-            />
+            <label>
+              Phone number
+              <Input
+                type="tel"
+                placeholder="Phone Number"
+                value={phoneNumber}
+                onChange={changePhoneNumber}
+              />
+            </label>
+            <label>
+              Wallet address
+              <Input
+                placeholder="0x0000000..."
+                value={walletAddress}
+                onChange={changeWalletAddress}
+              />
+            </label>
             <Button
               type="submit"
               className="w-[20rem] lg:w-[30rem]"

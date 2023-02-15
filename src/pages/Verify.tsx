@@ -56,8 +56,10 @@ const Verify: React.FC = () => {
         </h2>
         <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
           <form onSubmit={submit} className="mb-10">
-            <label>Verification code</label>
-            <Input placeholder="Code" value={code} onChange={changeCode} />
+            <label>
+              Verification code
+              <Input placeholder="Code" value={code} onChange={changeCode} />
+            </label>
             <Button
               type="submit"
               className="w-[20rem] lg:w-[30rem]"
