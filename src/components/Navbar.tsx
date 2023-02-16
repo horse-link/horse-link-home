@@ -32,9 +32,9 @@ export const Navbar: React.FC = () => {
         </a>
         <Button
           className="!whitespace-nowrap"
-          onClick={() => navigate("/signup")}
+          onClick={() => navigate("https://alpha.horse.link")}
         >
-          Sign Up
+          Launch App
         </Button>
       </div>
     </div>
