@@ -12,14 +12,16 @@ const Signup: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState<string>();
   const [error, setError] = useState(false);
+  const [validationError, setValidationError] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!utils.validation.validateSignupData({ phoneNumber, walletAddress }))
-      return;
+      return setValidationError(true);
 
+    setValidationError(false);
     setMsg(undefined);
     setError(false);
     setLoading(true);
@@ -69,7 +71,7 @@ const Signup: React.FC = () => {
               Phone number
               <Input
                 type="tel"
-                placeholder="Phone Number"
+                placeholder="Phone number"
                 value={phoneNumber}
                 onChange={changePhoneNumber}
               />
@@ -98,6 +100,12 @@ const Signup: React.FC = () => {
           {error && (
             <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
               This user has already registered for the Horse Link Alpha
+            </div>
+          )}
+          {validationError && (
+            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+              Failed to process signup data, please make sure your address is
+              correct and your phone number has no special characters
             </div>
           )}
         </div>

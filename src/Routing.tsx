@@ -17,6 +17,10 @@ const Routing: AppRoutes = [
   {
     path: "/verify",
     element: <Verify />
+  },
+  {
+    path: "/verify/:code",
+    element: <Verify />
   }
 ];
 
