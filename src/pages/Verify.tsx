@@ -3,12 +3,15 @@ import api from "../api/api";
 import { PageLayout, Button, Loader, Input } from "../components";
 import { Horse } from "../assets";
 import utils from "../utils";
+import { useParams } from "react-router-dom";
 
 const Verify: React.FC = () => {
+  const { code: paramsCode } = useParams();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [verified, setVerified] = useState(false);
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState(paramsCode || "");
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
