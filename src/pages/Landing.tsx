@@ -28,7 +28,7 @@ const Landing: React.FC = () => {
                 className="!w-auto lg:!px-8 lg:!py-4 mt-2 lg:mt-0"
                 onClick={() => navigate("/signup")}
               >
-                Register for tournament
+                Register for Tournament
               </Button>
             </div>
           </div>
