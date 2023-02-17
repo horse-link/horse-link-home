@@ -12,7 +12,7 @@ const Landing: React.FC = () => {
         <div className="flex items-center gap-x-32">
           <div className="flex flex-col text-center">
             <h2 className="text-4xl lg:text-8xl font-bold">
-              Win <span className="text-indigo-600">0.1 BTC</span>
+              Win <span className="text-indigo-600">0.2 BTC</span>
               <img
                 src={Bitcoin}
                 alt="Bitcoin symbol"
@@ -35,7 +35,7 @@ const Landing: React.FC = () => {
           <img src={Horse} className="h-[30rem] lg:block hidden" />
         </div>
       </div>
-      <div className="bg-white mt-20 py-10">
+      <div className="bg-white mt-20 pt-10 pb-20">
         <h3 className="w-full text-center font-semibold text-3xl lg:text-6xl">
           Horse : Link <span className="text-emerald-500">benefits</span>
         </h3>
