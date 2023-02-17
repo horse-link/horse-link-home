@@ -45,7 +45,7 @@ const Verify: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10">
+      <div className="flex flex-col items-center mt-10 lg:mt-32 h-[80vh]">
         <img
           alt="Horse Link logo"
           src={Horse}
@@ -55,7 +55,7 @@ const Verify: React.FC = () => {
           Verify your details
         </h1>
         <h2 className="mb-5 text-center w-[20rem] lg:w-[30rem]">
-          Enter your code and receive 100 Horse Link tokens to use for the
+          Enter your code and receive 1000 Horse Link tokens to use for the
           tournament
         </h2>
         <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">

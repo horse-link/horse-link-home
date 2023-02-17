@@ -35,7 +35,7 @@ const Landing: React.FC = () => {
           <img src={Horse} className="h-[30rem] lg:block hidden" />
         </div>
       </div>
-      <div className="bg-white mt-20 py-10">
+      <div className="bg-white mt-20 pt-10 pb-20">
         <h3 className="w-full text-center font-semibold text-3xl lg:text-6xl">
           Horse : Link <span className="text-emerald-500">benefits</span>
         </h3>

@@ -51,7 +51,7 @@ const Signup: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10">
+      <div className="flex flex-col items-center mt-10 lg:mt-32 h-[80vh]">
         <img
           alt="Horse Link logo"
           src={Horse}
