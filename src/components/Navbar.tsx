@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
         </a>
         <Button
           className="!whitespace-nowrap"
-          onClick={() => navigate("https://alpha.horse.link")}
+          onClick={() => (window.location.href = `https://alpha.horse.link`)}
         >
           Launch App
         </Button>

@@ -12,7 +12,7 @@ const Landing: React.FC = () => {
         <div className="flex items-center gap-x-32">
           <div className="flex flex-col text-center">
             <h2 className="text-4xl lg:text-8xl font-bold">
-              Win <span className="text-indigo-600">0.1 BTC</span>
+              Win <span className="text-indigo-600">0.2 BTC</span>
               <img
                 src={Bitcoin}
                 alt="Bitcoin symbol"
