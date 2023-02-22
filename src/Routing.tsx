@@ -4,6 +4,7 @@ import Landing from "./pages/Landing";
 
 const Verify = lazy(() => import("./pages/Verify"));
 const Signup = lazy(() => import("./pages/Signup"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 const Routing: AppRoutes = [
   {
@@ -21,6 +22,10 @@ const Routing: AppRoutes = [
   {
     path: "/verify/:code",
     element: <Verify />
+  },
+  {
+    path: "/terms",
+    element: <Terms />
   }
 ];
 
