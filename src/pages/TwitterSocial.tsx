@@ -1,6 +1,7 @@
+import { AxiosError } from "axios";
 import React, { useState } from "react";
 import api from "../api/api";
-import { PageLayout, Button } from "../components";
+import { PageLayout, Button, Loader } from "../components";
 
 const TwitterSocial: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -18,16 +19,23 @@ const TwitterSocial: React.FC = () => {
     setLoading(true);
 
     try {
-      const res = await api.register(phoneNumber, walletAddress);
+      const res = await api.registerTweet(tweetUrl, walletAddress);
       setMsg(res);
     } catch (e) {
       console.error(e);
-      // we know what the error will be, so we just have a flag here
-      setError(true);
+      if (e instanceof AxiosError) {
+        setError(e?.response?.data?.details || e?.request || e?.message);
+      } else if (e instanceof Error) {
+        setError(e.message);
+      } else {
+        setError("Something went wrong");
+      }
     } finally {
       setLoading(false);
     }
   };
+
+  const hasEnteredInfo = !tweetUrl || !walletAddress;
   return (
     <PageLayout>
       <div className="m-3">
@@ -62,11 +70,21 @@ const TwitterSocial: React.FC = () => {
           <Button
             type="submit"
             className="w-48 p-4"
-            disabled={!tweetUrl || !walletAddress}
+            disabled={loading || hasEnteredInfo}
           >
-            Submit
+            {loading ? <Loader color="white" /> : "Sign Up"}
           </Button>
         </form>
+        {msg && (
+          <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
+            {msg}
+          </div>
+        )}
+        {error && (
+          <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
+            {error}
+          </div>
+        )}
       </div>
     </PageLayout>
   );
