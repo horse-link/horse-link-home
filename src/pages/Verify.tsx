@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "../api/api";
-import { PageLayout, Button, Loader, Input } from "../components";
+import { PageLayout, Button, Loader, Input, Countdown } from "../components";
 import { Horse } from "../assets";
 import utils from "../utils";
 import { useParams } from "react-router-dom";
@@ -45,7 +45,8 @@ const Verify: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10 lg:mt-32 h-[80vh]">
+      <Countdown />
+      <div className="flex flex-col items-center mt-10 lg:mt-20 h-[80vh] lg:h-[68vh]">
         <img
           alt="Horse Link logo"
           src={Horse}
