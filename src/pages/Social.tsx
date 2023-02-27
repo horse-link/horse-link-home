@@ -107,8 +107,8 @@ const Social: React.FC = () => {
           )}
           {validationError && (
             <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
-              Failed to process your, please make sure your address is correct
-              and your URL is in the correct format
+              Failed to process your data, please make sure your address is
+              correct and your URL is in the correct format
             </div>
           )}
         </div>
