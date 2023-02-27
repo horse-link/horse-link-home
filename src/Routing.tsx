@@ -5,7 +5,7 @@ import Landing from "./pages/Landing";
 const Verify = lazy(() => import("./pages/Verify"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Terms = lazy(() => import("./pages/Terms"));
-const TwitterSocial = lazy(() => import("./pages/TwitterSocial"));
+const Social = lazy(() => import("./pages/Social"));
 
 const Routing: AppRoutes = [
   {
@@ -29,8 +29,8 @@ const Routing: AppRoutes = [
     element: <Terms />
   },
   {
-    path: "/social/twitter",
-    element: <TwitterSocial />
+    path: "/social",
+    element: <Social />
   }
 ];
 
