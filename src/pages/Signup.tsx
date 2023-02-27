@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "../api/api";
-import { Input, PageLayout, Button } from "../components";
+import { Input, PageLayout, Button, Countdown } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Loader } from "../components/Loader";
@@ -51,7 +51,8 @@ const Signup: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10 lg:mt-32 h-[80vh]">
+      <Countdown />
+      <div className="flex flex-col items-center mt-10 lg:mt-20 h-[80vh] lg:h-[68vh]">
         <img
           alt="Horse Link logo"
           src={Horse}
