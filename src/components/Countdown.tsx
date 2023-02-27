@@ -29,22 +29,22 @@ export const Countdown: React.FC = () => {
   }, []);
 
   return !eventTimestamp || !isEventInFuture ? null : (
-    <div className="w-full flex flex-col items-center justify-center mt-8">
-      <p className="font-bold text-xl mb-4">Tournament starts in:</p>
-      <div className="lg:flex grid grid-cols-2 grid-rows-2 gap-6">
-        <div className="bg-white p-6 rounded-md text-xl font-bold text-center">
+    <div className="mt-8 flex w-full flex-col items-center justify-center">
+      <p className="mb-4 text-xl font-bold">Tournament starts in:</p>
+      <div className="grid grid-cols-2 grid-rows-2 gap-6 lg:flex">
+        <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
           <p>{timeUntilEvent.days()}</p>
           <p>days</p>
         </div>
-        <div className="bg-white p-6 rounded-md text-xl font-bold text-center">
+        <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
           <p>{timeUntilEvent.hours()}</p>
           <p>hours</p>
         </div>
-        <div className="bg-white p-6 rounded-md text-xl font-bold text-center">
+        <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
           <p>{timeUntilEvent.minutes()}</p>
           <p>minutes</p>
         </div>
-        <div className="bg-white p-6 rounded-md text-xl font-bold text-center">
+        <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
           <p>{timeUntilEvent.seconds()}</p>
           <p>seconds</p>
         </div>

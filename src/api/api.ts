@@ -34,6 +34,18 @@ class Api {
 
     return verifyResponse;
   }
+
+  public async registerTweet(tweetUrl: string, walletAddress: string) {
+    const { data: registerTweetResponse } = await this.client.post<string>(
+      "/tweetRegister",
+      {
+        tweetUrl,
+        walletAddress
+      }
+    );
+
+    return registerTweetResponse;
+  }
 }
 
 const api = new Api();

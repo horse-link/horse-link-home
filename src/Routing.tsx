@@ -5,6 +5,7 @@ import Landing from "./pages/Landing";
 const Verify = lazy(() => import("./pages/Verify"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Terms = lazy(() => import("./pages/Terms"));
+const Social = lazy(() => import("./pages/Social"));
 
 const Routing: AppRoutes = [
   {
@@ -26,6 +27,10 @@ const Routing: AppRoutes = [
   {
     path: "/terms",
     element: <Terms />
+  },
+  {
+    path: "/social",
+    element: <Social />
   }
 ];
 

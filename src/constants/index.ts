@@ -1,7 +1,9 @@
 import * as time from "./time";
+import * as regex from "./regex";
 
 const constants = {
-  time
+  time,
+  regex
 };
 
 export default constants;

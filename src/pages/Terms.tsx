@@ -4,12 +4,12 @@ import { PageLayout } from "../components";
 const Terms: React.FC = () => {
   return (
     <PageLayout>
-      <div className="w-full flex flex-col items-center px-4">
-        <div className="p-6 my-10 bg-white rounded-lg lg:w-1/2">
+      <div className="flex w-full flex-col items-center px-4">
+        <div className="my-10 rounded-lg bg-white p-6 lg:w-1/2">
           <div className="w-full text-center">
             <h1 className="text-3xl font-bold">Terms & Conditions</h1>
           </div>
-          <div className="mt-6 w-full flex flex-col items-center">
+          <div className="mt-6 flex w-full flex-col items-center">
             <div className="w-full">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -38,7 +38,7 @@ const Terms: React.FC = () => {
               <p>
                 Integer enim nibh, posuere non laoreet et, ullamcorper vel
                 purus:
-                <ol className="list-disc ml-6">
+                <ol className="ml-6 list-disc">
                   <li>Vestibulum in est a lectus congue accumsan.</li>
                   <li>
                     Aenean sed velit posuere, vehicula orci ut, tincidunt risus.
@@ -53,7 +53,7 @@ const Terms: React.FC = () => {
                 ultrices tincidunt risus. Curabitur suscipit, nunc non luctus
                 varius, metus massa molestie augue, feugiat varius orci sapien
                 quis ex.
-                <ol className="list-decimal ml-6">
+                <ol className="ml-6 list-decimal">
                   <li>Duis varius turpis risus, at accumsan ex suscipit at.</li>
                   <li>Donec id dignissim quam, eu interdum tortor.</li>
                   <li>Fusce nec venenatis nulla.</li>

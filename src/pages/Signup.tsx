@@ -52,21 +52,21 @@ const Signup: React.FC = () => {
   return (
     <PageLayout>
       <Countdown />
-      <div className="flex flex-col items-center mt-10 lg:mt-20 h-[80vh] lg:h-[68vh]">
+      <div className="mt-10 flex h-[80vh] flex-col items-center lg:mt-20 lg:h-[68vh]">
         <img
           alt="Horse Link logo"
           src={Horse}
           className="mb-10 h-[5rem] w-[7rem]"
         />
-        <h1 className="mb-3 text-center font-bold lg:w-[50rem] text-3xl">
+        <h1 className="mb-3 text-center text-3xl font-bold lg:w-[50rem]">
           Register for the Horse Link Tournament for your chance to win 0.2
           BTC!!!
         </h1>
-        <h2 className="mb-5 text-center w-[20rem] lg:w-[30rem]">
+        <h2 className="mb-5 w-[20rem] text-center lg:w-[30rem]">
           For each friend you invite, receive a 10% larger starting balance to
           increase your chances of winning
         </h2>
-        <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
+        <div className="flex w-[20rem] flex-col pt-2 lg:w-[30rem]">
           <form onSubmit={submit} className="mb-10">
             <label>
               Phone number
@@ -94,17 +94,17 @@ const Signup: React.FC = () => {
             </Button>
           </form>
           {msg && (
-            <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
+            <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
               {msg}, redirecting...
             </div>
           )}
           {error && (
-            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+            <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
               This user has already registered for the Horse Link Alpha
             </div>
           )}
           {validationError && (
-            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+            <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
               Failed to process signup data, please make sure your address is
               correct and your phone number has no special characters
             </div>
