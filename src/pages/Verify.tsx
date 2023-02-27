@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "../api/api";
-import { PageLayout, Button, Loader, Input } from "../components";
+import { PageLayout, Button, Loader, Input, Countdown } from "../components";
 import { Horse } from "../assets";
 import utils from "../utils";
 import { useParams } from "react-router-dom";
@@ -45,20 +45,21 @@ const Verify: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10 lg:mt-32 h-[80vh]">
+      <Countdown />
+      <div className="mt-10 flex h-[80vh] flex-col items-center lg:mt-20 lg:h-[68vh]">
         <img
           alt="Horse Link logo"
           src={Horse}
           className="mb-10 h-[5rem] w-[7rem]"
         />
-        <h1 className="mb-3 text-center font-bold lg:w-[50rem] text-3xl">
+        <h1 className="mb-3 text-center text-3xl font-bold lg:w-[50rem]">
           Verify your details
         </h1>
-        <h2 className="mb-5 text-center w-[20rem] lg:w-[30rem]">
+        <h2 className="mb-5 w-[20rem] text-center lg:w-[30rem]">
           Enter your code and receive 1000 Horse Link tokens to use for the
           tournament
         </h2>
-        <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
+        <div className="flex w-[20rem] flex-col pt-2 lg:w-[30rem]">
           <form onSubmit={submit} className="mb-10">
             <label>
               Verification code
@@ -73,12 +74,12 @@ const Verify: React.FC = () => {
             </Button>
           </form>
           {verified && (
-            <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
+            <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
               Successfully verified, redirecting to Horse Link...
             </div>
           )}
           {error && (
-            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+            <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
               This user has already verified with Horse Link
             </div>
           )}
