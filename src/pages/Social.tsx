@@ -5,7 +5,6 @@ import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Link } from "react-router-dom";
-import constants from "../constants";
 
 const Social: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -78,41 +77,24 @@ const Social: React.FC = () => {
               Share this post on Twitter to enter the tournament
             </span>
           </h3>
-          <div className="my-4 w-full bg-white rounded-lg p-4">
-            <div className="w-full flex justify-between">
-              <div className="flex flex-col">
-                <span className="block font-bold">Your Name</span>
-                <span className="block font-semibold text-black/50">
-                  @yourtag
-                </span>
-              </div>
-              <span className="block font-semibold text-black/50">
-                {new Date().toDateString()}
-              </span>
-            </div>
-            <p className="w-full mt-2">
-              Hey, I&apos;ve just enterred into this competition with Horse.Link
+          <blockquote
+            className="twitter-tweet"
+            data-dnt="true"
+            data-theme="light"
+            data-align="center"
+          >
+            <p lang="en" dir="ltr">
+              Hey, I&#39;ve just enterred into this competition with{" "}
+              <a href="https://t.co/VnSQ6t0L2L">https://t.co/VnSQ6t0L2L</a>{" "}
               where I can go in the draw to win 0.2 Bitcoin. Register here:{" "}
-              <Link
-                className="font-semibold text-blue-600 underline decoration-2 underline-offset-2"
-                to="/"
-              >
-                https://horse.link
-              </Link>{" "}
-              to enter.
+              <a href="https://t.co/LOsrH5X6hy">https://t.co/LOsrH5X6hy</a> to
+              enter.
             </p>
-            <div className="w-full flex flex-col items-center mt-4">
-              <img src={Horse} className="w-[30rem]" />
-            </div>
-            <Button
-              onClick={() =>
-                navigator.clipboard.writeText(constants.text.TWEET)
-              }
-              className="mt-8"
-            >
-              Copy Text
-            </Button>
-          </div>
+            &mdash; Horse Link (@HorseLinkETH){" "}
+            <a href="https://twitter.com/HorseLinkETH/status/1630443890624073730?ref_src=twsrc%5Etfw">
+              February 28, 2023
+            </a>
+          </blockquote>
         </div>
         <div className="w-[20rem] lg:w-[40rem]">
           <h3 className="font-bold text-xl">
