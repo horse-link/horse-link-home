@@ -8,34 +8,31 @@ const Landing: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="w-full flex justify-center pt-20 lg:pt-10">
-        <div className="flex items-center gap-x-32">
-          <div className="flex flex-col text-center">
-            <h2 className="text-4xl lg:text-8xl font-bold">
-              Win <span className="text-indigo-600">0.2 BTC</span>
-              <img
-                src={Bitcoin}
-                alt="Bitcoin symbol"
-                className="h-[1.8rem] lg:h-[5rem] inline mb-1 ml-2 lg:ml-4"
-              />{" "}
-              with
-            </h2>
-            <div className="place-self-center mx-2">
-              <img alt="Horse Link Title" src={Title} />
-            </div>
-            <div className="flex justify-center mt-4">
-              <Button
-                className="!w-auto lg:!px-8 lg:!py-4 mt-2 lg:mt-0"
-                onClick={() => navigate("/signup")}
-              >
-                Register for Tournament
-              </Button>
-            </div>
-          </div>
-          <img src={Horse} className="h-[30rem] lg:block hidden" />
-        </div>
+      <Countdown large containerStyles="mt-12" />
+      <div className="w-full flex flex-col gap-y-10 mt-10 items-center">
+        <img src={Horse} className="h-[20rem] lg:block hidden" />
+        <h2 className="text-4xl lg:text-6xl font-bold w-full text-center">
+          Win <span className="text-indigo-600">0.2 BTC</span>
+          <img
+            src={Bitcoin}
+            alt="Bitcoin symbol"
+            className="h-[1.8rem] lg:h-[5rem] inline mb-1 ml-2 lg:ml-4"
+          />{" "}
+          with
+          <img
+            alt="Horse Link Title"
+            className="inline lg:ml-8 mb-4 mt-2 lg:mt-0 h-[2.5rem] lg:h-[3.2rem]"
+            src={Title}
+          />
+        </h2>
+        <Button
+          className="!w-auto lg:!px-8 lg:!py-4 mt-2 lg:mt-0 text-xl lg:text-4xl hover:scale-[1.05] transition-all"
+          onClick={() => navigate("/signup")}
+        >
+          Register for{" "}
+          <span className="underline underline-offset-4 ml-3">Tournament</span>
+        </Button>
       </div>
-      <Countdown />
       <div className="bg-white mt-20 pt-10 pb-20">
         <h3 className="w-full text-center font-semibold text-3xl lg:text-6xl">
           Horse : Link <span className="text-emerald-500">benefits</span>
