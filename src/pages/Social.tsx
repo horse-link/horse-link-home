@@ -5,6 +5,10 @@ import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Link } from "react-router-dom";
+import { TwitterTweetEmbed } from "react-twitter-embed";
+import { ClipLoader } from "react-spinners";
+
+const TWEET_ID = "1630443890624073730";
 
 const Social: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -56,57 +60,52 @@ const Social: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10">
+      <div className="mt-10 flex flex-col items-center">
         <img
           alt="Horse Link logo"
           src={Horse}
           className="mb-10 h-[5rem] w-[7rem]"
         />
-        <h1 className="mb-3 text-center font-bold lg:w-[50rem] text-3xl">
+        <h1 className="mb-3 text-center text-3xl font-bold lg:w-[50rem]">
           Tweet about us and get rewarded!
         </h1>
-        <h2 className="mb-5 text-center w-[20rem] lg:w-[30rem]">
+        <h2 className="mb-5 w-[20rem] text-center lg:w-[30rem]">
           Submit your tweet and address to receive{" "}
           <span className="font-bold">an additional 50 HorseLink tokens</span>{" "}
           to play in the tournament with
         </h2>
         <div className="w-[20rem] lg:w-[40rem]">
-          <h3 className="font-bold text-xl">
+          <h3 className="text-xl font-bold">
             Step 1:{" "}
             <span className="font-normal">
               Share this post on Twitter to enter the tournament
             </span>
           </h3>
-          <blockquote
-            className="twitter-tweet"
-            data-dnt="true"
-            data-theme="light"
-            data-align="center"
-          >
-            <p lang="en" dir="ltr">
-              Hey, I&#39;ve just enterred into this competition with{" "}
-              <a href="https://t.co/VnSQ6t0L2L">https://t.co/VnSQ6t0L2L</a>{" "}
-              where I can go in the draw to win 0.2 Bitcoin. Register here:{" "}
-              <a href="https://t.co/LOsrH5X6hy">https://t.co/LOsrH5X6hy</a> to
-              enter.
-            </p>
-            &mdash; Horse Link (@HorseLinkETH){" "}
-            <a href="https://twitter.com/HorseLinkETH/status/1630443890624073730?ref_src=twsrc%5Etfw">
-              February 28, 2023
-            </a>
-          </blockquote>
+          <div className="relative left-10">
+            <TwitterTweetEmbed
+              tweetId={TWEET_ID}
+              placeholder={
+                <div className="relative right-10 mt-4 flex w-full flex-col items-center">
+                  <ClipLoader color="white" />
+                </div>
+              }
+              options={{
+                hideThread: true
+              }}
+            />
+          </div>
         </div>
         <div className="w-[20rem] lg:w-[40rem]">
-          <h3 className="font-bold text-xl">
+          <h3 className="text-xl font-bold">
             Step 2:{" "}
             <span className="font-normal">
               Enter the URL of your Twitter post to claim your tokens
             </span>
           </h3>
-          <div className="flex flex-col pt-2 w-full">
+          <div className="flex w-full flex-col pt-2">
             <form
               onSubmit={handleSubmit}
-              className="mb-10 w-full flex flex-col gap-y-4 mt-2"
+              className="mb-10 mt-2 flex w-full flex-col gap-y-4"
             >
               <Input
                 placeholder="Twitter Post URL"
@@ -136,17 +135,17 @@ const Social: React.FC = () => {
               </div>
             </form>
             {msg && (
-              <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
+              <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
                 {msg}
               </div>
             )}
             {error && (
-              <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+              <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
                 {error}
               </div>
             )}
             {validationError && (
-              <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+              <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
                 Failed to process your data, please make sure your address is
                 correct and your URL is in the correct format
               </div>
