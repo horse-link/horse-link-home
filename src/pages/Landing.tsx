@@ -1,5 +1,5 @@
 import React from "react";
-import { PageLayout, Button, InfoCard } from "../components";
+import { PageLayout, Button, InfoCard, Countdown } from "../components";
 import { Bitcoin, Horse, Eth, Friend, Bank, Title } from "../assets";
 import { useNavigate } from "react-router-dom";
 
@@ -35,6 +35,7 @@ const Landing: React.FC = () => {
           <img src={Horse} className="h-[30rem] lg:block hidden" />
         </div>
       </div>
+      <Countdown />
       <div className="bg-white mt-20 pt-10 pb-20">
         <h3 className="w-full text-center font-semibold text-3xl lg:text-6xl">
           Horse : Link <span className="text-emerald-500">benefits</span>
