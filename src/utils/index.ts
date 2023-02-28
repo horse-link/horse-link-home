@@ -1,7 +1,9 @@
 import * as validation from "./validation";
+import * as time from "./time";
 
 const utils = {
-  validation
+  validation,
+  time
 };
 
 export default utils;

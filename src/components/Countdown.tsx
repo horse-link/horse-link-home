@@ -2,10 +2,17 @@ import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import { MILLIS_IN_S } from "../constants/time";
+import classNames from "classnames";
+import utils from "../utils";
 
 dayjs.extend(duration);
 
-export const Countdown: React.FC = () => {
+type Props = {
+  large?: boolean;
+  containerStyles?: string;
+};
+
+export const Countdown: React.FC<Props> = ({ large, containerStyles }) => {
   const [now, setNow] = useState(Date.now());
 
   // will be either 0 or a timestamp, if 0 we want to return null in our return statement
@@ -19,6 +26,9 @@ export const Countdown: React.FC = () => {
   const timeUntilEvent = dayjs.duration(
     +dayjs(now).diff(dayjs(eventTimestamp)) * -1
   );
+  // split the diff into its component segments
+  const { days, hours, minutes, seconds } =
+    utils.time.getDurationSplits(timeUntilEvent);
 
   // countdown
   useEffect(() => {
@@ -29,23 +39,37 @@ export const Countdown: React.FC = () => {
   }, []);
 
   return !eventTimestamp || !isEventInFuture ? null : (
-    <div className="mt-8 flex w-full flex-col items-center justify-center">
-      <p className="mb-4 text-xl font-bold">Tournament starts in:</p>
+    <div
+      className={classNames(
+        "mt-8 flex w-full flex-col items-center justify-center",
+        {
+          [containerStyles!]: !!containerStyles
+        }
+      )}
+    >
+      <p
+        className={classNames("font-bold", {
+          "text-xl mb-4": !large,
+          "text-xl lg:text-7xl mb-8": large
+        })}
+      >
+        Tournament Jumps In:
+      </p>
       <div className="grid grid-cols-2 grid-rows-2 gap-6 lg:flex">
         <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
-          <p>{timeUntilEvent.days()}</p>
+          <p>{days}</p>
           <p>days</p>
         </div>
         <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
-          <p>{timeUntilEvent.hours()}</p>
+          <p>{hours}</p>
           <p>hours</p>
         </div>
         <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
-          <p>{timeUntilEvent.minutes()}</p>
+          <p>{minutes}</p>
           <p>minutes</p>
         </div>
         <div className="rounded-md bg-white p-6 text-center text-xl font-bold">
-          <p>{timeUntilEvent.seconds()}</p>
+          <p>{seconds}</p>
           <p>seconds</p>
         </div>
       </div>
