@@ -4,6 +4,8 @@ import api from "../api/api";
 import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
+import { Link } from "react-router-dom";
+import constants from "../constants";
 
 const Social: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -55,7 +57,7 @@ const Social: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="flex flex-col items-center mt-10 lg:mt-32 h-[80vh]">
+      <div className="flex flex-col items-center mt-10">
         <img
           alt="Horse Link logo"
           src={Horse}
@@ -69,48 +71,106 @@ const Social: React.FC = () => {
           <span className="font-bold">an additional 50 HorseLink tokens</span>{" "}
           to play in the tournament with
         </h2>
-        <div className="flex flex-col w-[20rem] lg:w-[30rem] pt-2">
-          <form onSubmit={handleSubmit} className="mb-10">
-            <label>
-              Tweet Url
+        <div className="w-[20rem] lg:w-[40rem]">
+          <h3 className="font-bold text-xl">
+            Step 1:{" "}
+            <span className="font-normal">
+              Share this post on Twitter to enter the tournament
+            </span>
+          </h3>
+          <div className="my-4 w-full bg-white rounded-lg p-4">
+            <div className="w-full flex justify-between">
+              <div className="flex flex-col">
+                <span className="block font-bold">Your Name</span>
+                <span className="block font-semibold text-black/50">
+                  @yourtag
+                </span>
+              </div>
+              <span className="block font-semibold text-black/50">
+                {new Date().toDateString()}
+              </span>
+            </div>
+            <p className="w-full mt-2">
+              Hey, I&apos;ve just enterred into this competition with Horse.Link
+              where I can go in the draw to win 10k worth of Bitcoin. Register
+              here:{" "}
+              <Link
+                className="font-semibold text-blue-600 underline decoration-2 underline-offset-2"
+                to="/"
+              >
+                https://horse.link
+              </Link>{" "}
+              to enter.
+            </p>
+            <div className="w-full flex flex-col items-center mt-4">
+              <img src={Horse} className="w-[30rem]" />
+            </div>
+            <Button
+              onClick={() =>
+                navigator.clipboard.writeText(constants.text.TWEET)
+              }
+              className="mt-8"
+            >
+              Copy Text
+            </Button>
+          </div>
+        </div>
+        <div className="w-[20rem] lg:w-[40rem]">
+          <h3 className="font-bold text-xl">
+            Step 2:{" "}
+            <span className="font-normal">
+              Enter the URL of your Twitter post to claim your tokens
+            </span>
+          </h3>
+          <div className="flex flex-col pt-2 w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="mb-10 w-full flex flex-col gap-y-4 mt-2"
+            >
               <Input
-                placeholder="https://twitter.com/yourusername/status/123456789"
+                placeholder="Twitter Post URL"
                 value={tweetUrl}
                 onChange={changeTweetUrl}
               />
-            </label>
-            <label>
-              Wallet address
               <Input
-                placeholder="0x0000000..."
+                placeholder="ETH Address"
                 value={walletAddress}
                 onChange={changeWalletAddress}
               />
-            </label>
-            <Button
-              type="submit"
-              className="w-[20rem] lg:w-[30rem]"
-              disabled={loading || !hasEnteredInfo}
-            >
-              {loading ? <Loader color="white" /> : "Sign Up"}
-            </Button>
-          </form>
-          {msg && (
-            <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
-              {msg}
-            </div>
-          )}
-          {error && (
-            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
-              {error}
-            </div>
-          )}
-          {validationError && (
-            <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
-              Failed to process your data, please make sure your address is
-              correct and your URL is in the correct format
-            </div>
-          )}
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={loading || !hasEnteredInfo}
+              >
+                {loading ? <Loader color="white" /> : "Sign Up"}
+              </Button>
+              <div className="w-full font-bold">
+                Don&apos;t have Twitter?{" "}
+                <Link
+                  to="/signup"
+                  className="underline decoration-2 underline-offset-2"
+                >
+                  Click Here
+                </Link>
+              </div>
+            </form>
+            {msg && (
+              <div className="bg-indigo-600 rounded-lg p-4 text-center select-none text-white mb-10">
+                {msg}
+              </div>
+            )}
+            {error && (
+              <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+                {error}
+              </div>
+            )}
+            {validationError && (
+              <div className="bg-red-600 text-white rounded-lg p-4 text-center select-none mb-10">
+                Failed to process your data, please make sure your address is
+                correct and your URL is in the correct format
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </PageLayout>

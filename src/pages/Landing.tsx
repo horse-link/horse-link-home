@@ -27,7 +27,7 @@ const Landing: React.FC = () => {
         </h2>
         <Button
           className="!w-auto lg:!px-8 lg:!py-4 mt-2 lg:mt-0 text-xl lg:text-4xl hover:scale-[1.05] transition-all"
-          onClick={() => navigate("/signup")}
+          onClick={() => navigate("/social")}
         >
           Register for{" "}
           <span className="underline underline-offset-4 ml-3">Tournament</span>

@@ -66,49 +66,48 @@ const Signup: React.FC = () => {
           For each friend you invite, receive a 10% larger starting balance to
           increase your chances of winning
         </h2>
-        <div className="flex w-[20rem] flex-col pt-2 lg:w-[30rem]">
-          <form onSubmit={submit} className="mb-10">
-            <label>
-              Phone number
+        <div className="w-[20rem] lg:w-[40rem]">
+          <div className="flex flex-col pt-2 w-full">
+            <form
+              onSubmit={submit}
+              className="mb-10 w-full flex flex-col gap-y-4 mt-2"
+            >
               <Input
                 type="tel"
-                placeholder="Phone number"
+                placeholder="Phone Number"
                 value={phoneNumber}
                 onChange={changePhoneNumber}
               />
-            </label>
-            <label>
-              Wallet address
               <Input
-                placeholder="0x0000000..."
+                placeholder="ETH Address"
                 value={walletAddress}
                 onChange={changeWalletAddress}
               />
-            </label>
-            <Button
-              type="submit"
-              className="w-[20rem] lg:w-[30rem]"
-              disabled={loading || !hasEnteredInfo}
-            >
-              {loading ? <Loader color="white" /> : "Sign Up"}
-            </Button>
-          </form>
-          {msg && (
-            <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
-              {msg}, redirecting...
-            </div>
-          )}
-          {error && (
-            <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
-              This user has already registered for the Horse Link Alpha
-            </div>
-          )}
-          {validationError && (
-            <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
-              Failed to process signup data, please make sure your address is
-              correct and your phone number has no special characters
-            </div>
-          )}
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={loading || !hasEnteredInfo}
+              >
+                {loading ? <Loader color="white" /> : "Sign Up"}
+              </Button>
+            </form>
+            {msg && (
+              <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
+                {msg}, redirecting...
+              </div>
+            )}
+            {error && (
+              <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
+                This user has already registered for the Horse Link Alpha
+              </div>
+            )}
+            {validationError && (
+              <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
+                Failed to process signup data, please make sure your address is
+                correct and your phone number has no special characters
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </PageLayout>
