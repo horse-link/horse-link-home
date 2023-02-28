@@ -92,8 +92,7 @@ const Social: React.FC = () => {
             </div>
             <p className="w-full mt-2">
               Hey, I&apos;ve just enterred into this competition with Horse.Link
-              where I can go in the draw to win 10k worth of Bitcoin. Register
-              here:{" "}
+              where I can go in the draw to win 0.2 Bitcoin. Register here:{" "}
               <Link
                 className="font-semibold text-blue-600 underline decoration-2 underline-offset-2"
                 to="/"
