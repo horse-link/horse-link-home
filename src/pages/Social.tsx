@@ -5,8 +5,7 @@ import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Link } from "react-router-dom";
-import { TwitterTweetEmbed } from "react-twitter-embed";
-import { ClipLoader } from "react-spinners";
+import { Tweet } from "react-twitter-widgets";
 
 const TWEET_ID = "1630443890624073730";
 
@@ -82,17 +81,7 @@ const Social: React.FC = () => {
             </span>
           </h3>
           <div className="relative left-10">
-            <TwitterTweetEmbed
-              tweetId={TWEET_ID}
-              placeholder={
-                <div className="relative right-10 mt-4 flex w-full flex-col items-center">
-                  <ClipLoader color="white" />
-                </div>
-              }
-              options={{
-                hideThread: true
-              }}
-            />
+            <Tweet tweetId={TWEET_ID} />
           </div>
         </div>
         <div className="w-[20rem] lg:w-[40rem]">
