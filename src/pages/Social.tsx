@@ -109,6 +109,16 @@ const Social: React.FC = () => {
               >
                 <Button>Create the tweet for me!</Button>
               </a>
+              <span className="my-1 block w-full text-center text-base font-normal">
+                or
+              </span>
+              <Button
+                onClick={() =>
+                  navigator.clipboard.writeText(constants.text.TWEET)
+                }
+              >
+                Copy text
+              </Button>
             </div>
           </h3>
         </div>
