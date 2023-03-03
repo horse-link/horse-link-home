@@ -68,7 +68,7 @@ const Social: React.FC = () => {
         </h1>
         <h2 className="mb-5 w-[20rem] text-center lg:w-[30rem]">
           Submit your tweet and address to receive{" "}
-          <span className="font-bold">an additional 50 HorseLink tokens</span>{" "}
+          <span className="font-bold">an additional 100 HorseLink tokens</span>{" "}
           to play in the tournament with
         </h2>
         <div className="w-[20rem] lg:w-[40rem]">
