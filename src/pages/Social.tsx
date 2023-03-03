@@ -5,9 +5,7 @@ import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
 import { Link } from "react-router-dom";
-import { Tweet } from "react-twitter-widgets";
-
-const TWEET_ID = "1630443890624073730";
+import constants from "../constants";
 
 const Social: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -79,10 +77,50 @@ const Social: React.FC = () => {
             <span className="font-normal">
               Share this post on Twitter to enter the tournament
             </span>
+            <div className="my-4 rounded-md bg-white p-4">
+              <p className="text-base font-normal">
+                Hey, I&apos;ve just entered into this competition with{" "}
+                <a
+                  href="https://horse.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-700 underline underline-offset-2"
+                >
+                  horse.link
+                </a>{" "}
+                where I can go in the draw to win 0.2 Bitcoin. Register here:{" "}
+                <a
+                  href="https://horse.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-700 underline underline-offset-2"
+                >
+                  horse.link
+                </a>{" "}
+                to enter!
+              </p>
+              <a
+                className="mt-4 block"
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                  constants.text.TWEET
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Create the tweet for me!</Button>
+              </a>
+              <span className="my-1 block w-full text-center text-base font-normal">
+                or
+              </span>
+              <Button
+                onClick={() =>
+                  navigator.clipboard.writeText(constants.text.TWEET)
+                }
+              >
+                Copy text
+              </Button>
+            </div>
           </h3>
-          <div className="relative left-10">
-            <Tweet tweetId={TWEET_ID} />
-          </div>
         </div>
         <div className="w-[20rem] lg:w-[40rem]">
           <h3 className="text-xl font-bold">
