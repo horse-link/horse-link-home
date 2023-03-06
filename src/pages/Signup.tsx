@@ -67,10 +67,10 @@ const Signup: React.FC = () => {
           increase your chances of winning
         </h2>
         <div className="w-[20rem] lg:w-[40rem]">
-          <div className="flex flex-col pt-2 w-full">
+          <div className="flex w-full flex-col pt-2">
             <form
               onSubmit={submit}
-              className="mb-10 w-full flex flex-col gap-y-4 mt-2"
+              className="mb-10 mt-2 flex w-full flex-col gap-y-4"
             >
               <Input
                 type="tel"
@@ -98,7 +98,7 @@ const Signup: React.FC = () => {
             )}
             {error && (
               <div className="mb-10 select-none rounded-lg bg-red-600 p-4 text-center text-white">
-                This user has already registered for the Horse Link Alpha
+                You have already successfully registered for the competition
               </div>
             )}
             {validationError && (
