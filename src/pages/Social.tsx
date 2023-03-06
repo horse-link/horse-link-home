@@ -97,7 +97,7 @@ const Social: React.FC = () => {
                 >
                   horse.link
                 </a>{" "}
-                to enter!
+                to enter.
               </p>
               <a
                 className="mt-4 block"
