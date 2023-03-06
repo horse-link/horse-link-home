@@ -56,9 +56,9 @@ const Landing: React.FC = () => {
             </InfoCard>
             <InfoCard>
               <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
-                Refer a friend
+                Share on Twitter
               </h2>
-              <p className="mt-4">Refer a friend and receive 100 HL.</p>
+              <p className="mt-4">Share on Twitter and receive 100 HL.</p>
               <img
                 src={Friend}
                 alt="Friend symbol"
