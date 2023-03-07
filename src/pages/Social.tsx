@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import constants from "../constants";
 
 const TWEET_MUST_INCLUDE_HL_TEXT =
-  "Your tweet must include the word “horse.link” to register for the competition";
+  'Your tweet must include the word "horse.link" to register for the competition';
 
 const ALREADY_REGISTERED_TEXT =
   "You have already successfully registered for the competition";
@@ -57,19 +57,16 @@ const Social: React.FC = () => {
   };
 
   const handleError = (e: any) => {
-    if (e instanceof AxiosError) {
-      const expectedError = e?.response?.data?.details;
-      if (expectedError) {
-        const mappedErrorMessage = errorMapping[expectedError];
-        setError(mappedErrorMessage);
-      } else {
-        setError(e?.request || e?.message);
-      }
-    } else if (e instanceof Error) {
-      setError(e.message);
-    } else {
-      setError("Something went wrong");
-    }
+    const isAxiosError = e instanceof AxiosError;
+    const isGenericError = e instanceof Error;
+    if (!isAxiosError && !isGenericError)
+      return setError("Something went wrong");
+    if (!isAxiosError) return setError(e.message);
+
+    const expectedError = e?.response?.data?.details;
+    if (!expectedError) return setError(e?.request || e?.message);
+    const mappedErrorMessage = errorMapping[expectedError];
+    return setError(mappedErrorMessage);
   };
 
   const changeTweetUrl = (e: React.SyntheticEvent<HTMLInputElement>) =>
