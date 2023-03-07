@@ -91,7 +91,7 @@ const Social: React.FC = () => {
         <h2 className="mb-5 w-[20rem] text-center lg:w-[30rem]">
           Submit your tweet and address to receive{" "}
           <span className="font-bold">an additional 100 HorseLink tokens</span>{" "}
-          to play in the tournament with
+          to play with in the tournament
         </h2>
         <div className="w-[20rem] lg:w-[40rem]">
           <h3 className="text-xl font-bold">
@@ -100,8 +100,8 @@ const Social: React.FC = () => {
               Share this post on Twitter to enter the tournament
             </span>
             <div className="my-4 rounded-md bg-white p-4">
-              <p className="text-base font-normal">
-                Hey, I&apos;ve just entered into this competition with{" "}
+              <p className="text-center text-base font-normal">
+                GM, I&apos;ve just entered into a competition with{" "}
                 <a
                   href="https://horse.link"
                   target="_blank"
@@ -110,7 +110,7 @@ const Social: React.FC = () => {
                 >
                   horse.link
                 </a>{" "}
-                where I can go in the draw to win 0.2 Bitcoin. Register here:{" "}
+                to win 0.2 Bitcoin. Register at{" "}
                 <a
                   href="https://horse.link"
                   target="_blank"
@@ -129,7 +129,7 @@ const Social: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>Create the tweet for me!</Button>
+                <Button>Create the Tweet for Me!</Button>
               </a>
               <span className="my-1 block w-full text-center text-base font-normal">
                 or
@@ -139,7 +139,7 @@ const Social: React.FC = () => {
                   navigator.clipboard.writeText(constants.text.TWEET)
                 }
               >
-                Copy text
+                Copy Text
               </Button>
             </div>
           </h3>
