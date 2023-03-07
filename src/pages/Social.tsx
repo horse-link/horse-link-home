@@ -12,7 +12,7 @@ const TWEET_MUST_INCLUDE_HL_TEXT =
 
 const ALREADY_REGISTERED_TEXT =
   "You have already successfully registered for the competition";
-const errorMapping: { [key: string]: string } = {
+const errorMapping: Record<string, string> = {
   "Tweet content does not contain any links": TWEET_MUST_INCLUDE_HL_TEXT,
   'Tweet content does not contain "horse.link"': TWEET_MUST_INCLUDE_HL_TEXT,
   "Invalid tweet url": TWEET_MUST_INCLUDE_HL_TEXT,
