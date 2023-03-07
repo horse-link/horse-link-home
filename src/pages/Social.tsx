@@ -7,6 +7,21 @@ import { Horse } from "../assets";
 import { Link } from "react-router-dom";
 import constants from "../constants";
 
+const TWEET_MUST_INCLUDE_HL_TEXT =
+  'Your tweet must include the word "horse.link" to register for the competition';
+
+const ALREADY_REGISTERED_TEXT =
+  "You have already successfully registered for the competition";
+const errorMapping: Record<string, string> = {
+  "Tweet content does not contain any links": TWEET_MUST_INCLUDE_HL_TEXT,
+  'Tweet content does not contain "horse.link"': TWEET_MUST_INCLUDE_HL_TEXT,
+  "Invalid tweet url": TWEET_MUST_INCLUDE_HL_TEXT,
+  "Could not get oembed data":
+    "Could not load the tweet, make sure that the tweet is public",
+  "User already exists": ALREADY_REGISTERED_TEXT,
+  "Wallet already exists": ALREADY_REGISTERED_TEXT
+};
+
 const Social: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState("");
   const [tweetUrl, setTweetUrl] = useState("");
@@ -35,16 +50,23 @@ const Social: React.FC = () => {
       setMsg(res);
     } catch (e) {
       console.error(e);
-      if (e instanceof AxiosError) {
-        setError(e?.response?.data?.details || e?.request || e?.message);
-      } else if (e instanceof Error) {
-        setError(e.message);
-      } else {
-        setError("Something went wrong");
-      }
+      handleError(e);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleError = (e: any) => {
+    const isAxiosError = e instanceof AxiosError;
+    const isGenericError = e instanceof Error;
+    if (!isAxiosError && !isGenericError)
+      return setError("Something went wrong");
+    if (!isAxiosError) return setError(e.message);
+
+    const expectedError = e?.response?.data?.details;
+    if (!expectedError) return setError(e?.request || e?.message);
+    const mappedErrorMessage = errorMapping[expectedError];
+    return setError(mappedErrorMessage);
   };
 
   const changeTweetUrl = (e: React.SyntheticEvent<HTMLInputElement>) =>
@@ -69,7 +91,7 @@ const Social: React.FC = () => {
         <h2 className="mb-5 w-[20rem] text-center lg:w-[30rem]">
           Submit your tweet and address to receive{" "}
           <span className="font-bold">an additional 100 HorseLink tokens</span>{" "}
-          to play in the tournament with
+          to play with in the tournament
         </h2>
         <div className="w-[20rem] lg:w-[40rem]">
           <h3 className="text-xl font-bold">
@@ -78,8 +100,8 @@ const Social: React.FC = () => {
               Share this post on Twitter to enter the tournament
             </span>
             <div className="my-4 rounded-md bg-white p-4">
-              <p className="text-base font-normal">
-                Hey, I&apos;ve just entered into this competition with{" "}
+              <p className="text-center text-base font-normal">
+                GM, I&apos;ve just entered into a competition with{" "}
                 <a
                   href="https://horse.link"
                   target="_blank"
@@ -88,7 +110,7 @@ const Social: React.FC = () => {
                 >
                   horse.link
                 </a>{" "}
-                where I can go in the draw to win 0.2 Bitcoin. Register here:{" "}
+                to win 0.2 Bitcoin. Register at{" "}
                 <a
                   href="https://horse.link"
                   target="_blank"
@@ -107,7 +129,7 @@ const Social: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>Create the tweet for me!</Button>
+                <Button>Create the Tweet for Me!</Button>
               </a>
               <span className="my-1 block w-full text-center text-base font-normal">
                 or
@@ -117,7 +139,7 @@ const Social: React.FC = () => {
                   navigator.clipboard.writeText(constants.text.TWEET)
                 }
               >
-                Copy text
+                Copy Text
               </Button>
             </div>
           </h3>
