@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 export const Navbar: React.FC = () => (
-  <div className="fixed top-0 w-full bg-white flex items-center justify-between p-6 shadow-xl">
-    <Link className="w-full flex items-center gap-x-3" to="/">
+  <div className="fixed top-0 flex w-full items-center justify-between bg-white p-6 shadow-xl">
+    <Link className="flex w-full items-center gap-x-3" to="/">
       <img
         src={Horse}
         alt="Horse Link logo"
-        className="h-[2.4rem] hidden lg:block"
+        className="hidden h-[2.4rem] lg:block"
       />
       <h2 className="text-sm lg:text-xl">Horse : Link</h2>
     </Link>
