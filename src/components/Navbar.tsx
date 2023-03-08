@@ -27,11 +27,7 @@ export const Navbar: React.FC = () => (
       >
         Twitter
       </a>
-      <a
-        target="_self"
-        rel="noreferrer noopener"
-        href="https://alpha.horse.link"
-      >
+      <a rel="noreferrer noopener" href="https://alpha.horse.link">
         <Button className="!whitespace-nowrap" onClick={() => {}}>
           Launch App
         </Button>
