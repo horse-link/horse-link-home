@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => (
       <img
         src={Horse}
         alt="Horse Link logo"
-        className="hidden h-[2.4rem] lg:block"
+        className="h-[2.4rem] hidden lg:block"
       />
       <h2 className="text-sm lg:text-xl">Horse : Link</h2>
     </Link>
