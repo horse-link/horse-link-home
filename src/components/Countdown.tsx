@@ -4,6 +4,7 @@ import duration from "dayjs/plugin/duration";
 import { MILLIS_IN_S } from "../constants/time";
 import classNames from "classnames";
 import utils from "../utils";
+import constants from "../constants";
 
 dayjs.extend(duration);
 
@@ -16,7 +17,7 @@ export const Countdown: React.FC<Props> = ({ large, containerStyles }) => {
   const [now, setNow] = useState(Date.now());
 
   // will be either 0 or a timestamp, if 0 we want to return null in our return statement
-  const eventTimestamp = +(process.env.VITE_EVENT_TS || "0");
+  const eventTimestamp = +(constants.env.EVENT_TS || "0");
   // we can use this to check if the event is already over by referencing !isEventInFuture, and return null accordingly
   const isEventInFuture = dayjs(now).isBefore(dayjs(eventTimestamp));
 
@@ -49,8 +50,8 @@ export const Countdown: React.FC<Props> = ({ large, containerStyles }) => {
     >
       <p
         className={classNames("font-bold", {
-          "text-xl mb-4": !large,
-          "text-xl lg:text-7xl mb-8": large
+          "mb-4 text-xl": !large,
+          "mb-8 text-xl lg:text-7xl": large
         })}
       >
         Tournament Jumps In:

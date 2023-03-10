@@ -5,6 +5,7 @@ import utils from "../utils";
 import { Horse } from "../assets";
 import { Loader } from "../components/Loader";
 import { useNavigate } from "react-router-dom";
+import { MyWalletAddressInput } from "../components/MyWalletAddressInput";
 
 const Signup: React.FC = () => {
   const navigate = useNavigate();
@@ -44,8 +45,7 @@ const Signup: React.FC = () => {
   const changePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) =>
     setPhoneNumber(e.currentTarget.value);
 
-  const changeWalletAddress = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setWalletAddress(e.currentTarget.value);
+  const changeWalletAddress = (address: string) => setWalletAddress(address);
 
   const hasEnteredInfo = !!phoneNumber && !!walletAddress;
 
@@ -78,7 +78,7 @@ const Signup: React.FC = () => {
                 value={phoneNumber}
                 onChange={changePhoneNumber}
               />
-              <Input
+              <MyWalletAddressInput
                 placeholder="ETH Address"
                 value={walletAddress}
                 onChange={changeWalletAddress}

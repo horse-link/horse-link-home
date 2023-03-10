@@ -6,6 +6,7 @@ import utils from "../utils";
 import { Horse } from "../assets";
 import { Link } from "react-router-dom";
 import constants from "../constants";
+import { MyWalletAddressInput } from "../components/MyWalletAddressInput";
 
 const TWEET_MUST_INCLUDE_HL_TEXT =
   'Your tweet must include the word "horse.link" to register for the competition';
@@ -72,8 +73,7 @@ const Social: React.FC = () => {
   const changeTweetUrl = (e: React.SyntheticEvent<HTMLInputElement>) =>
     setTweetUrl(e.currentTarget.value);
 
-  const changeWalletAddress = (e: React.SyntheticEvent<HTMLInputElement>) =>
-    setWalletAddress(e.currentTarget.value);
+  const changeWalletAddress = (address: string) => setWalletAddress(address);
 
   const hasEnteredInfo = !!tweetUrl && !!walletAddress;
 
@@ -161,7 +161,7 @@ const Social: React.FC = () => {
                 value={tweetUrl}
                 onChange={changeTweetUrl}
               />
-              <Input
+              <MyWalletAddressInput
                 placeholder="ETH Address"
                 value={walletAddress}
                 onChange={changeWalletAddress}

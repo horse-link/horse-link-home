@@ -1,10 +1,11 @@
 import axios, { AxiosInstance } from "axios";
+import constants from "../constants";
 
 class Api {
   private client: AxiosInstance;
   constructor() {
     this.client = axios.create({
-      baseURL: process.env.VITE_API_URL,
+      baseURL: constants.env.API_URL,
       headers: {
         "Content-Type": "application/json",
         Accept: ["application/json", "text/plain"]
