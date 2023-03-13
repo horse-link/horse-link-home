@@ -9,6 +9,3 @@ const getEnvVariable = (name: EnvVariable) => {
 export const API_URL = getEnvVariable("VITE_API_URL");
 export const EVENT_TS = getEnvVariable("VITE_EVENT_TS");
 export const ALCHEMY_API_KEY = getEnvVariable("VITE_ALCHEMY_API_KEY");
-export const WALLET_CONNECT_PROJECT_ID = getEnvVariable(
-  "VITE_WALLET_CONNECT_PROJECT_ID"
-);

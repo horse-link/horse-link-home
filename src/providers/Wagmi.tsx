@@ -23,8 +23,7 @@ const client = createClient({
     new WalletConnectConnector({
       chains,
       options: {
-        projectId: constants.env.WALLET_CONNECT_PROJECT_ID,
-        showQrModal: true
+        qrcode: true
       }
     })
   ],
