@@ -1,8 +1,8 @@
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { goerli, localhost } from "wagmi/chains";
+import { goerli, localhost } from "@wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
+import { WalletConnectLegacyConnector } from "wagmi/connectors/walletConnectLegacy";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import constants from "../constants";
 
@@ -20,7 +20,7 @@ const client = createClient({
   autoConnect: true,
   connectors: [
     new MetaMaskConnector({ chains }),
-    new WalletConnectConnector({
+    new WalletConnectLegacyConnector({
       chains,
       options: {
         qrcode: true
@@ -33,6 +33,4 @@ const client = createClient({
 
 export const WagmiProvider: React.FC<{ children: React.ReactNode }> = ({
   children
-}) => {
-  return <WagmiConfig client={client}>{children}</WagmiConfig>;
-};
+}) => <WagmiConfig client={client}>{children}</WagmiConfig>;
