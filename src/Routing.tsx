@@ -29,7 +29,7 @@ const Routing: AppRoutes = [
     element: <Terms />
   },
   {
-    path: "/social",
+    path: "/tournament",
     element: <Social />
   }
 ];
