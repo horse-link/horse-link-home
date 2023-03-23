@@ -1,5 +1,5 @@
 import { AxiosError } from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import api from "../api/api";
 import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
@@ -30,6 +30,16 @@ const Social: React.FC = () => {
   const [msg, setMsg] = useState<string>();
   const [error, setError] = useState<string>();
   const [validationError, setValidationError] = useState(false);
+
+  // redirect if a successful message appears
+  useEffect(() => {
+    if (!msg) return;
+
+    setTimeout(
+      () => location.replace(constants.env.APP_URL),
+      3 * constants.time.MILLIS_IN_S
+    );
+  }, [msg]);
 
   const clearState = () => {
     setValidationError(false);
@@ -175,7 +185,7 @@ const Social: React.FC = () => {
             </form>
             {msg && (
               <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
-                {msg}
+                {msg}, redirecting you to Horse Link...
               </div>
             )}
             {error && (
