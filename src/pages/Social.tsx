@@ -4,7 +4,6 @@ import api from "../api/api";
 import { PageLayout, Button, Loader, Input } from "../components";
 import utils from "../utils";
 import { Horse } from "../assets";
-import { Link } from "react-router-dom";
 import constants from "../constants";
 import { MyWalletAddressInput } from "../components/MyWalletAddressInput";
 
@@ -173,15 +172,6 @@ const Social: React.FC = () => {
               >
                 {loading ? <Loader color="white" /> : "Sign Up"}
               </Button>
-              <div className="w-full font-bold">
-                Don&apos;t have Twitter?{" "}
-                <Link
-                  to="/signup"
-                  className="underline decoration-2 underline-offset-2"
-                >
-                  Click Here
-                </Link>
-              </div>
             </form>
             {msg && (
               <div className="mb-10 select-none rounded-lg bg-indigo-600 p-4 text-center text-white">
