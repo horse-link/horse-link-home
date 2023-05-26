@@ -4,8 +4,13 @@ import constants from "../constants";
 import utils from "../utils";
 import { AxiosError } from "axios";
 import api from "../api/api";
+import { useAccount, useConnect } from "wagmi";
+import { MetaMaskIcon, WalletConnectIcon } from "../icons";
 
 const Register: React.FC = () => {
+  const { address, isConnected } = useAccount();
+  const { connect, connectors } = useConnect();
+
   const [postUrl, setPostUrl] = useState("");
   const changePostUrl = (e: React.SyntheticEvent<HTMLInputElement>) =>
     setPostUrl(e.currentTarget.value);
@@ -13,6 +18,23 @@ const Register: React.FC = () => {
   const [ethAddress, setEthAddress] = useState("");
   const changeEthAddress = (e: React.SyntheticEvent<HTMLInputElement>) =>
     setEthAddress(e.currentTarget.value);
+
+  // autofill address if connected
+  useEffect(() => {
+    if (!isConnected || !address) return;
+
+    setEthAddress(address);
+  }, [isConnected, address]);
+
+  // functions to connect to MetaMask (MM) or WalletConnect (WC)
+  const connectToMM = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    connect({ connector: connectors[0] });
+  };
+  const connectToWC = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    connect({ connector: connectors[1] });
+  };
 
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState<string>();
@@ -124,12 +146,20 @@ const Register: React.FC = () => {
               value={postUrl}
               onChange={changePostUrl}
             />
-            <input
-              className="w-full border border-hl-primary bg-hl-background p-4 !outline-none !ring-0"
-              placeholder="ETH Address"
-              value={ethAddress}
-              onChange={changeEthAddress}
-            />
+            <div className="flex w-full border border-hl-primary bg-hl-background p-4">
+              <input
+                className="w-full text-ellipsis bg-hl-background !outline-none !ring-0"
+                placeholder="ETH Address"
+                value={ethAddress}
+                onChange={changeEthAddress}
+              />
+              <button onClick={connectToMM} className="ml-4">
+                <MetaMaskIcon className="h-[1.5rem] w-[1.5rem] lg:h-[2rem] lg:w-[2rem]" />
+              </button>
+              <button onClick={connectToWC} className="ml-4">
+                <WalletConnectIcon className="h-[1.5rem] w-[1.5rem] lg:h-[2rem] lg:w-[2rem]" />
+              </button>
+            </div>
             <button
               type="submit"
               className="w-full bg-hl-secondary py-4 font-bold text-hl-background"
