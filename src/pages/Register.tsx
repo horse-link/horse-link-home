@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NewPageLayout } from "../components";
 import constants from "../constants";
+import utils from "../utils";
+import { AxiosError } from "axios";
+import api from "../api/api";
 
 const Register: React.FC = () => {
   const [postUrl, setPostUrl] = useState("");
@@ -11,10 +14,64 @@ const Register: React.FC = () => {
   const changeEthAddress = (e: React.SyntheticEvent<HTMLInputElement>) =>
     setEthAddress(e.currentTarget.value);
 
-  const submitForm = (e: React.FormEvent) => {
-    e.preventDefault();
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState<string>();
 
-    console.log(postUrl, ethAddress);
+  const [errorMsg, setErrorMsg] = useState<string>();
+  const handleError = (e: any) => {
+    console.error(e);
+
+    const isAxiosError = e instanceof AxiosError;
+    const isGenericError = e instanceof Error;
+    if (!isAxiosError && !isGenericError)
+      return setErrorMsg("Something went wrong");
+    if (!isAxiosError) return setErrorMsg(e.message);
+
+    const expectedError = e?.response?.data?.details;
+    if (!expectedError) return setErrorMsg(e?.request || e?.message);
+    const mappedErrorMessage = constants.errors.ErrorMapping[expectedError];
+    return setErrorMsg(mappedErrorMessage);
+  };
+
+  const [validationError, setValidationError] = useState(false);
+
+  const clearState = () => {
+    setValidationError(false);
+    setSuccessMsg(undefined);
+    setErrorMsg(undefined);
+  };
+
+  // redirect on successful message
+  useEffect(() => {
+    if (!successMsg) return;
+
+    setTimeout(
+      () => location.replace(constants.env.APP_URL),
+      3 * constants.time.MILLIS_IN_S // 3 seconds
+    );
+  }, [successMsg]);
+
+  const submitForm = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (
+      !utils.validation.validateSocialData({
+        tweetUrl: postUrl,
+        walletAddress: ethAddress
+      })
+    )
+      return setValidationError(true);
+
+    clearState();
+
+    setLoading(true);
+    try {
+      const res = await api.registerTweet(postUrl, ethAddress);
+      setSuccessMsg(res);
+    } catch (e) {
+      handleError(e);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -72,9 +129,26 @@ const Register: React.FC = () => {
             <button
               type="submit"
               className="w-full bg-hl-secondary py-4 font-bold text-hl-background"
+              disabled={!postUrl || !ethAddress || loading}
             >
               LET THE TOURNAMENT BEGIN!
             </button>
+            {successMsg && (
+              <div className="w-full bg-green-500 py-4 text-center">
+                {successMsg}, redirecting you to Horse Link...
+              </div>
+            )}
+            {errorMsg && (
+              <div className="w-full bg-red-600 py-4 text-center">
+                {errorMsg}
+              </div>
+            )}
+            {validationError && (
+              <div className="w-full bg-red-600 py-4 text-center">
+                Failed to process your data, please make sure your address is
+                correct and your URL is in the correct format
+              </div>
+            )}
           </form>
         </div>
       </div>
