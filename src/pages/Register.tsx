@@ -84,18 +84,20 @@ const Register: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-40 flex w-full flex-col items-center gap-y-10 px-[28%]">
-        <p className="w-full border-y-2 border-hl-primary py-4 text-center text-4xl">
+      <div className="relative z-40 flex w-full flex-col items-center gap-y-10 px-6 pt-10 lg:px-[28%] lg:pt-0">
+        <p className="w-full border-y-2 border-hl-primary py-4 text-center text-2xl lg:text-4xl">
           Tweet about us and get 100{" "}
           <span className="text-hl-secondary">H</span>L Tokens!
         </p>
-        <div className="flex w-full flex-col items-center gap-y-8 rounded-xl border border-hl-primary bg-hl-background/50 py-10 px-12">
-          <h2 className="font-basement text-5xl">STEP ONE:</h2>
-          <p className="text-center text-xl font-semibold text-hl-tertiary">
+        <div className="flex w-full flex-col items-center gap-y-8 rounded-xl border border-hl-primary bg-hl-background/50 py-10 px-4 lg:px-12">
+          <h2 className="text-center font-basement text-4xl lg:text-5xl">
+            STEP ONE:
+          </h2>
+          <p className="text-center font-semibold text-hl-tertiary lg:text-xl">
             Share the below Tweet on Twitter to enter the tournament
           </p>
           <a
-            className="block bg-hl-primary px-32 py-4 text-center font-bold text-hl-background transition-all duration-100 hover:scale-[1.05]"
+            className="block bg-hl-primary px-8 py-4 text-center font-bold text-hl-background transition-all duration-100 hover:scale-[1.05] lg:px-32"
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               constants.text.TWEET
             )}`}
@@ -105,14 +107,16 @@ const Register: React.FC = () => {
             GENERATE THE Tweet for Me!
           </a>
         </div>
-        <div className="flex w-full flex-col items-center gap-y-8 rounded-xl border border-hl-primary bg-hl-background/50 py-10 px-12">
-          <h2 className="font-basement text-5xl">STEP TWO:</h2>
-          <p className="text-center text-xl font-semibold text-hl-tertiary">
+        <div className="flex w-full flex-col items-center gap-y-8 rounded-xl border border-hl-primary bg-hl-background/50 py-10 px-4 lg:px-12">
+          <h2 className="text-center font-basement text-4xl lg:text-5xl">
+            STEP TWO:
+          </h2>
+          <p className="text-center font-semibold text-hl-tertiary lg:text-xl">
             Enter the URL of your Twitter post to claim your tokens
           </p>
           <form
             onSubmit={submitForm}
-            className="flex w-full flex-col items-center gap-y-4 px-[25%]"
+            className="flex w-full flex-col items-center gap-y-4 lg:px-[25%]"
           >
             <input
               className="w-full border border-hl-primary bg-hl-background p-4 !outline-none !ring-0"
