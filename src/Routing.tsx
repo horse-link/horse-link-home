@@ -7,6 +7,7 @@ const Signup = lazy(() => import("./pages/Signup"));
 const Terms = lazy(() => import("./pages/Terms"));
 // const Social = lazy(() => import("./pages/Social"));
 const Tournament = lazy(() => import("./pages/Tournament"));
+const Register = lazy(() => import("./pages/Register"));
 
 const Routing: AppRoutes = [
   {
@@ -32,6 +33,10 @@ const Routing: AppRoutes = [
   {
     path: "/tournament",
     element: <Tournament />
+  },
+  {
+    path: "/register",
+    element: <Register />
   }
 ];
 
