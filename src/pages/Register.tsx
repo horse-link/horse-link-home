@@ -106,7 +106,7 @@ const Register: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-40 flex w-full flex-col items-center gap-y-10 px-6 pt-10 lg:px-[28%] lg:pt-0">
+      <div className="relative z-40 flex w-full flex-col items-center gap-y-10 px-6 py-10 lg:px-[28%] lg:py-0">
         <p className="w-full border-y-2 border-hl-primary py-4 text-center text-2xl lg:text-4xl">
           Tweet about us and get 100{" "}
           <span className="text-hl-secondary">H</span>L Tokens!
