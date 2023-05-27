@@ -5,3 +5,5 @@ export * from "./Navbar";
 export * from "./Button";
 export * from "./Input";
 export * from "./Countdown";
+export * from "./NewPageLayout";
+export * from "./NewNavbar";

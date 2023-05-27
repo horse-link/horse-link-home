@@ -4,7 +4,7 @@ import { PageLayout } from "../components";
 
 const Transition: React.FC = () => (
   <PageLayout>
-    <div className="absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center">
+    <div className="absolute top-0 left-0 flex h-screen w-screen flex-col items-center justify-center bg-hl-background">
       <ClipLoader color="white" size={20} />
     </div>
   </PageLayout>

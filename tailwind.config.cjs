@@ -6,7 +6,23 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans]
+        sans: ["'JetBrains Mono'", ...defaultTheme.fontFamily.sans],
+        basement: [
+          "Basement Grotesk",
+          "'JetBrains Mono'",
+          ...defaultTheme.fontFamily.sans
+        ]
+      },
+      colors: {
+        "hl-background": "#000",
+        "hl-primary": "#fff",
+        "hl-secondary": "#ff431c",
+        "hl-tertiary": "#b1b1b1",
+        "hl-background-secondary": "#151515",
+        "hl-border": "#3b3b3b"
+      },
+      screens: {
+        "3xl": "1900px"
       }
     }
   },
