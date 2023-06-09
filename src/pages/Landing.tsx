@@ -69,7 +69,7 @@ const Landing: React.FC = () => {
               <h2 className="w-full text-center text-2xl font-bold text-indigo-600">
                 ERC4626 Vaults
               </h2>
-              <p className="mt-4">Earn yield by deposting liquidty.</p>
+              <p className="mt-4">Earn yield by depositing liquidity.</p>
               <img
                 src={Bank}
                 alt="Vault symbol"
