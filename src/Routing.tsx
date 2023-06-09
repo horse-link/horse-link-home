@@ -1,6 +1,7 @@
 import { AppRoutes } from "./types/app";
 import { lazy } from "react";
-import Landing from "./pages/Landing";
+// import Landing from "./pages/Landing";
+import Home from "./pages/Home";
 
 const Verify = lazy(() => import("./pages/Verify"));
 const Signup = lazy(() => import("./pages/Signup"));
@@ -12,7 +13,7 @@ const Register = lazy(() => import("./pages/Register"));
 const Routing: AppRoutes = [
   {
     path: "/",
-    element: <Landing />
+    element: <Home />
   },
   {
     path: "/signup",
