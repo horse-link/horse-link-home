@@ -20,3 +20,13 @@ body {
     src: url("/fonts/Basement Grotesk.otf");
   }
 }
+
+@layer utilities {
+  .funky-clip {
+    clip-path: polygon(0 0, 92% 0, 100% 50%, 100% 100%, 0 100%);
+  }
+
+  .funky-clip-2 {
+    clip-path: polygon(0 0, 92.5% 0, 100% 50%, 100% 100%, 0 100%);
+  }
+}
