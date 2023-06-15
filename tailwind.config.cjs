@@ -25,7 +25,8 @@ module.exports = {
         "hl-home-background-bars": "#222222",
         "hl-home-text-gray": "#5E6B7E",
         "hl-home-card-background": "#222325",
-        "hl-home-card-body": "#DDDDDD"
+        "hl-home-card-body": "#DDDDDD",
+        "hl-scrollbar-background": "#101010"
       },
       screens: {
         "3xl": "1900px"
@@ -41,6 +42,7 @@ module.exports = {
       opacity: {
         default: "0.4"
       }
-    })
+    }),
+    require("tailwind-scrollbar")({ nocompatible: true })
   ]
 };

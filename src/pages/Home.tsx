@@ -22,7 +22,6 @@ const Home: React.FC = () => (
           REGISTER FOR TOURNAMENT
         </HomeComponents.FunkyLink>
       </div>
-
       {/* non-mobile image */}
       <img
         src="/images/Dashboard.png"
@@ -31,23 +30,55 @@ const Home: React.FC = () => (
         height={576}
         className="hidden lg:block"
       />
-
       {/* mobile image goes here */}
       {/* ... */}
-
-      <BsMouseFill size={48} color="#ff431c" className="mt-12 animate-bounce" />
+      <BsMouseFill
+        size={48}
+        color="#ff431c" // color is hl-secondary in tailwind config
+        className="mt-12 animate-bounce"
+      />
       <p className="text-xs font-extrabold text-hl-home-text-gray">
         SCROLL TO EXPLORE
       </p>
     </section>
 
     {/* info cards section */}
-    <section className="flex w-full flex-col items-center gap-y-48 pt-48 text-center">
+    <section className="flex w-full flex-col items-center gap-y-48 py-48 text-center">
       <h2 className="font-basement text-6xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
-      <div className="flex gap-x-6">
-        <div className="w-1/3">
+      <div className="flex gap-x-12 overflow-x-scroll py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem]">
+        <div className="w-[28rem] shrink-0 grow-0">
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+        </div>
+        <div className="w-[28rem] shrink-0 grow-0">
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+        </div>
+        <div className="w-[28rem] shrink-0 grow-0">
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+        </div>
+        <div className="w-[28rem] shrink-0 grow-0">
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+        </div>
+        <div className="w-[28rem] shrink-0 grow-0">
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+        </div>
+        <div className="w-[28rem] shrink-0 grow-0">
           <FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
