@@ -29,4 +29,8 @@ body {
   .funky-clip-2 {
     clip-path: polygon(0 0, 92.5% 0, 100% 50%, 100% 100%, 0 100%);
   }
+
+  .funky-card {
+    clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
+  }
 }

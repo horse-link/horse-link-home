@@ -23,7 +23,9 @@ module.exports = {
         // home page colors
         "hl-home-background": "#151515",
         "hl-home-background-bars": "#222222",
-        "hl-home-text-gray": "#5E6B7E"
+        "hl-home-text-gray": "#5E6B7E",
+        "hl-home-card-background": "#222325",
+        "hl-home-card-body": "#DDDDDD"
       },
       screens: {
         "3xl": "1900px"

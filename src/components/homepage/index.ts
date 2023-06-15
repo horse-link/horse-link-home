@@ -1,2 +1,3 @@
 export * from "./GrayBackground";
-export * from "./FunkyButton";
+export * from "./FunkyLink";
+export * from "./Bars";
