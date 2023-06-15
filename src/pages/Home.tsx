@@ -90,11 +90,11 @@ const Home: React.FC = () => (
     {/* phone section */}
     <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
       <div className="grid grid-cols-2 grid-rows-2 lg:w-[90rem]">
-        <div className="w-full text-left">
+        <div className="w-full pt-20 text-left">
           <h2 className="font-basement text-6xl leading-[72px]">
             Lorem ipsum dolor sit amet
           </h2>
-          <p className="mt-4 text-2xl text-hl-home-text-gray-2">
+          <p className="mt-10 text-2xl text-hl-home-text-gray-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
           </p>
@@ -152,7 +152,25 @@ const Home: React.FC = () => (
           height={722}
           className="hidden lg:block"
         />
-        <div className="w-full text-left">text</div>
+        <div className="w-full pt-20 text-left">
+          <h2 className="font-basement text-6xl leading-[72px]">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <div className="mt-20 flex w-full items-center gap-x-10">
+            <HomeComponents.FunkyLink to="/">
+              LAUNCH APP
+            </HomeComponents.FunkyLink>
+            <p className="text-lg text-hl-secondary">Read the docs</p>
+          </div>
+        </div>
       </div>
     </section>
   </HomeComponents.GrayBackground>
