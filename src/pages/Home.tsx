@@ -86,6 +86,69 @@ const Home: React.FC = () => (
         </div>
       </div>
     </section>
+
+    {/* phone section */}
+    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
+      <div className="grid grid-cols-2 grid-rows-2 lg:w-[90rem]">
+        <div className="w-full text-left">
+          <h2 className="font-basement text-6xl leading-[72px]">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p className="mt-4 text-2xl text-hl-home-text-gray-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+          <ul className="mt-10 flex flex-col gap-y-4 text-xl">
+            <li className="flex items-center gap-x-4">
+              <img
+                src="/images/Bullet.png"
+                alt="An orange bullet point"
+                width={32}
+                height={32}
+              />
+              Lorem ipsum dolor sit amet, consectetur
+            </li>
+            <li className="flex items-center gap-x-4">
+              <img
+                src="/images/Bullet.png"
+                alt="An orange bullet point"
+                width={32}
+                height={32}
+              />
+              Lorem ipsum dolor sit amet, consectetur
+            </li>
+            <li className="flex items-center gap-x-4">
+              <img
+                src="/images/Bullet.png"
+                alt="An orange bullet point"
+                width={32}
+                height={32}
+              />
+              Lorem ipsum dolor sit amet, consectetur
+            </li>
+          </ul>
+        </div>
+        <div className="flex w-full justify-end">
+          {/* non-mobile */}
+          <img
+            src="/images/PhoneOne.png"
+            alt="A screenshot of the Horse Link mobile site"
+            width={387}
+            height={722}
+            className="hidden lg:block"
+          />
+        </div>
+        {/* non-mobile */}
+        <img
+          src="/images/PhoneTwo.png"
+          alt="A screenshot of the Horse Link app on mobile"
+          width={386}
+          height={722}
+          className="hidden lg:block"
+        />
+        <div className="w-full text-left">text</div>
+      </div>
+    </section>
   </HomeComponents.GrayBackground>
 );
 

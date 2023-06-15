@@ -26,7 +26,8 @@ module.exports = {
         "hl-home-text-gray": "#5E6B7E",
         "hl-home-card-background": "#222325",
         "hl-home-card-body": "#DDDDDD",
-        "hl-scrollbar-background": "#101010"
+        "hl-scrollbar-background": "#101010",
+        "hl-home-text-gray-2": "#808080"
       },
       screens: {
         "3xl": "1900px"
