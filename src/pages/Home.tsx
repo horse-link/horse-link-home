@@ -127,6 +127,12 @@ const Home: React.FC = () => (
               Lorem ipsum dolor sit amet, consectetur
             </li>
           </ul>
+          <div className="mt-20 flex w-full items-center gap-x-10">
+            <HomeComponents.FunkyLink to="/">
+              LAUNCH APP
+            </HomeComponents.FunkyLink>
+            <p className="text-lg text-hl-secondary">Read the docs</p>
+          </div>
         </div>
         <div className="flex w-full justify-end">
           {/* non-mobile */}
