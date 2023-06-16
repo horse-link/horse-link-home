@@ -195,6 +195,42 @@ const Home: React.FC = () => (
         </div>
       </div>
     </section>
+
+    {/* more cards section */}
+    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
+      <div className="lg:w-[90rem]">
+        <h2 className="font-basement text-6xl">Lorem ipsum dolor sit</h2>
+        <p className="mt-4 text-2xl text-hl-home-text-gray-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div className="mt-20 grid grid-cols-3 grid-rows-3 gap-14">
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+          <FunkyCard
+            title="Lorem ipsum dolor sit amet"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          />
+        </div>
+      </div>
+    </section>
   </HomeComponents.GrayBackground>
 );
 
