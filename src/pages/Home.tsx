@@ -270,7 +270,34 @@ const Home: React.FC = () => (
     </section>
 
     {/* quotes section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center"></section>
+    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
+      <div className="flex w-full items-center justify-center gap-x-20 bg-hl-home-card-background py-32">
+        <HomeComponents.Quote
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          author={{
+            img: "/images/AvatarOne.png",
+            name: "Markus Freeman",
+            position: "Dev Ops - Azious"
+          }}
+        />
+        <HomeComponents.Quote
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          author={{
+            img: "/images/AvatarTwo.png",
+            name: "Becky Stal",
+            position: "Sr. Engineer - FauxChain"
+          }}
+        />
+        <HomeComponents.Quote
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          author={{
+            img: "/images/AvatarThree.png",
+            name: "Ethan Jordan",
+            position: "Blockchain Analyst - Enzotech"
+          }}
+        />
+      </div>
+    </section>
   </HomeComponents.GrayBackground>
 );
 
