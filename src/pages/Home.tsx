@@ -1,7 +1,6 @@
 import React from "react";
 import * as HomeComponents from "../components/homepage";
 import { BsMouseFill } from "react-icons/bs";
-import { FunkyCard } from "../components/homepage/FunkyCard";
 
 const Home: React.FC = () => (
   <HomeComponents.GrayBackground>
@@ -49,37 +48,37 @@ const Home: React.FC = () => (
       </h2>
       <div className="flex gap-x-12 overflow-x-scroll py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem]">
         <div className="w-[28rem] shrink-0 grow-0">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
         <div className="w-[28rem] shrink-0 grow-0">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
         <div className="w-[28rem] shrink-0 grow-0">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
         <div className="w-[28rem] shrink-0 grow-0">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
         <div className="w-[28rem] shrink-0 grow-0">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
         <div className="w-[28rem] shrink-0 grow-0">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
@@ -204,27 +203,27 @@ const Home: React.FC = () => (
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
         <div className="mt-20 grid grid-cols-3 grid-rows-2 gap-14">
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
-          <FunkyCard
+          <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
@@ -233,7 +232,7 @@ const Home: React.FC = () => (
     </section>
 
     {/* article? section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
+    <section className="flex w-full flex-col items-center gap-y-6 pt-52 text-center">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between pt-10">
           <div className="text-left">
@@ -251,6 +250,21 @@ const Home: React.FC = () => (
               VIEW ALL POSTS
             </HomeComponents.FunkyLink>
           </div>
+        </div>
+
+        <div className="flex w-full flex-col gap-y-12 px-12">
+          <HomeComponents.FunkyWideCard
+            title="Lorem ipsum dolor sit amet"
+            image="/images/GraphicOne.png"
+          />
+          <HomeComponents.FunkyWideCard
+            title="Lorem ipsum dolor sit amet"
+            image="/images/GraphicTwo.png"
+          />
+          <HomeComponents.FunkyWideCard
+            title="Lorem ipsum dolor sit amet"
+            image="/images/GraphicThree.png"
+          />
         </div>
       </div>
     </section>

@@ -27,7 +27,8 @@ module.exports = {
         "hl-home-card-background": "#222325",
         "hl-home-card-body": "#DDDDDD",
         "hl-scrollbar-background": "#101010",
-        "hl-home-text-gray-2": "#808080"
+        "hl-home-text-gray-2": "#808080",
+        "hl-home-cta-background": "#EB5BE5" // to be used with 5% opacity
       },
       screens: {
         "3xl": "1900px"
