@@ -1,4 +1,5 @@
 import React from "react";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 type Props = {
   title: string;
@@ -24,9 +25,15 @@ export const FunkyWideCard: React.FC<Props> = ({ title, image }) => (
           UPDATES
         </span>
         <h3 className="font-basement text-2xl">{title}</h3>
-        <span className="block w-fit text-hl-home-text-gray">
-          {new Date().toLocaleDateString()}
-        </span>
+        <div className="flex w-full items-center justify-between">
+          <span className="block w-fit text-hl-home-text-gray">
+            {new Date().toLocaleDateString()}
+          </span>
+          <FaLongArrowAltRight
+            color="#5E6B7E" // color is hl-text-gray in tailwind config
+            size={30}
+          />
+        </div>
       </div>
     </div>
     <div className="absolute top-0 left-2 z-40 h-full w-full scale-[0.94] rounded-[2rem] bg-hl-secondary shadow-lg" />

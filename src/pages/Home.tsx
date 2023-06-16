@@ -234,7 +234,7 @@ const Home: React.FC = () => (
     {/* article? section */}
     <section className="flex w-full flex-col items-center gap-y-6 pt-52 text-center">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
-        <div className="flex flex-col justify-between pt-10">
+        <div className="flex flex-col justify-between py-10">
           <div className="text-left">
             <h2 className="font-basement text-6xl">
               Lorem ipsum dolor sit amet
@@ -252,7 +252,7 @@ const Home: React.FC = () => (
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-y-12 px-12">
+        <div className="flex w-full flex-col gap-y-6 px-12">
           <HomeComponents.FunkyWideCard
             title="Lorem ipsum dolor sit amet"
             image="/images/GraphicOne.png"
@@ -268,6 +268,9 @@ const Home: React.FC = () => (
         </div>
       </div>
     </section>
+
+    {/* quotes section */}
+    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center"></section>
   </HomeComponents.GrayBackground>
 );
 
