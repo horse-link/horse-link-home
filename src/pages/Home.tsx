@@ -203,7 +203,7 @@ const Home: React.FC = () => (
         <p className="mt-4 text-2xl text-hl-home-text-gray-2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <div className="mt-20 grid grid-cols-3 grid-rows-3 gap-14">
+        <div className="mt-20 grid grid-cols-3 grid-rows-2 gap-14">
           <FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
@@ -228,6 +228,29 @@ const Home: React.FC = () => (
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
+        </div>
+      </div>
+    </section>
+
+    {/* article? section */}
+    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
+      <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
+        <div className="flex flex-col justify-between pt-10">
+          <div className="text-left">
+            <h2 className="font-basement text-6xl">
+              Lorem ipsum dolor sit amet
+            </h2>
+            <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+          </div>
+
+          <div className="w-[20rem]">
+            <HomeComponents.FunkyLink to="/">
+              VIEW ALL POSTS
+            </HomeComponents.FunkyLink>
+          </div>
         </div>
       </div>
     </section>
