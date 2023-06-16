@@ -173,6 +173,28 @@ const Home: React.FC = () => (
         </div>
       </div>
     </section>
+
+    {/* stats section */}
+    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
+      <div className="flex justify-evenly rounded-3xl bg-hl-home-card-background py-10 lg:w-[90rem]">
+        <div className="text-center">
+          <h2 className="font-basement text-3xl">$110M</h2>
+          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+        </div>
+        <div className="text-center">
+          <h2 className="font-basement text-3xl">$110M</h2>
+          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+        </div>
+        <div className="text-center">
+          <h2 className="font-basement text-3xl">$110M</h2>
+          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+        </div>
+        <div className="text-center">
+          <h2 className="font-basement text-3xl">$110M</h2>
+          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+        </div>
+      </div>
+    </section>
   </HomeComponents.GrayBackground>
 );
 
