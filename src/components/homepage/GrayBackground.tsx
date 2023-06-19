@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { Bars } from "./Bars";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -13,10 +15,16 @@ export const GrayBackground: React.FC<Props> = ({ children }) => {
   }, []);
 
   return (
-    <div className="bg-hl-home-background text-white selection:bg-hl-secondary">
+    <div className="bg-hl-home-background text-white selection:bg-hl-secondary selection:text-hl-primary">
+      {/* header */}
+      <Header />
+
       {/* content */}
       <div className="relative z-50 h-full" ref={contentContainerRef}>
         {children}
+
+        {/* footer */}
+        <Footer />
       </div>
 
       {/* bars */}

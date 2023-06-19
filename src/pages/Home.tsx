@@ -298,6 +298,18 @@ const Home: React.FC = () => (
         />
       </div>
     </section>
+
+    {/* CTA section */}
+    <section className="flex w-full flex-col items-center gap-y-6 py-32 text-center">
+      <h2 className="font-basement text-5xl">Join the HorseLink community</h2>
+      <p className="mb-20 text-xl text-hl-home-text-gray-2">
+        Or learn all about{" "}
+        <span className="text-hl-secondary">how to build on HorseLink</span>.
+      </p>
+      <HomeComponents.FunkyLink to="/">
+        JOIN THE COMMUNITY
+      </HomeComponents.FunkyLink>
+    </section>
   </HomeComponents.GrayBackground>
 );
 
