@@ -7,8 +7,9 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { RiFacebookFill } from "react-icons/ri";
 
 export const Footer: React.FC = () => (
-  <footer className="flex w-full flex-col items-center bg-hl-scrollbar-background pt-32 pb-10">
-    <div className="w-[90rem]">
+  <footer className="relative flex w-full flex-col items-center overflow-hidden bg-hl-scrollbar-background py-32">
+    {/* main footer content */}
+    <div className="relative z-50 w-[90rem]">
       <div className="flex items-center justify-between">
         <h3 className="font-basement text-3xl">
           HORSE<span className="text-hl-secondary">LINK</span>
@@ -67,6 +68,15 @@ export const Footer: React.FC = () => (
           </Link>
         </div>
       </div>
+    </div>
+
+    {/* background graphic */}
+    <div className="absolute top-0 w-full">
+      <img
+        src="/images/FooterGraphic.png"
+        alt="A complex background graphic for the footer"
+        className="w-full"
+      />
     </div>
   </footer>
 );

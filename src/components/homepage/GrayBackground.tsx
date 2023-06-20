@@ -27,6 +27,15 @@ export const GrayBackground: React.FC<Props> = ({ children }) => {
         <Footer />
       </div>
 
+      {/* background graphic */}
+      <div className="absolute top-0 z-[49] w-full">
+        <img
+          src="/images/BackgroundGraphic.png"
+          className="mt-14 w-full"
+          alt="A complex background graphic"
+        />
+      </div>
+
       {/* bars */}
       <Bars height={contentContainerHeight} />
     </div>
