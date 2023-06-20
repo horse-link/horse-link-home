@@ -211,13 +211,15 @@ const Home: React.FC = () => (
     </section>
 
     {/* more cards section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
-      <div className="lg:w-[90rem]">
-        <h2 className="font-basement text-6xl">Lorem ipsum dolor sit</h2>
-        <p className="mt-4 text-2xl text-hl-home-text-gray-2">
+    <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
+      <div className="w-full lg:w-[90rem]">
+        <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-normal">
+          Lorem ipsum dolor sit
+        </h2>
+        <p className="mt-4 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <div className="mt-20 grid grid-cols-3 grid-rows-2 gap-14">
+        <div className="mt-20 flex grid-cols-3 grid-rows-2 flex-col items-center gap-14 lg:grid">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
@@ -246,8 +248,8 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    {/* article? section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-52 text-center">
+    {/* article? section (hidden on mobile) */}
+    <section className="hidden w-full flex-col items-center gap-y-6 pt-52 text-center lg:flex">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between py-10">
           <div className="text-left">
@@ -285,8 +287,8 @@ const Home: React.FC = () => (
     </section>
 
     {/* quotes section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
-      <div className="flex w-full items-center justify-center gap-x-20 bg-hl-home-card-background py-32">
+    <section className="flex w-[95vw] flex-col items-center gap-y-6 text-center lg:w-full lg:pt-32">
+      <div className="flex w-full flex-col items-center justify-center gap-20 pt-14 lg:flex-row lg:bg-hl-home-card-background lg:py-32">
         <HomeComponents.Quote
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           author={{
