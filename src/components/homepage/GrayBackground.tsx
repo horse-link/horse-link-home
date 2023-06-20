@@ -20,7 +20,10 @@ export const GrayBackground: React.FC<Props> = ({ children }) => {
       <Header />
 
       {/* content */}
-      <div className="relative z-50 h-full" ref={contentContainerRef}>
+      <div
+        className="relative z-50 flex h-full flex-col items-center lg:block"
+        ref={contentContainerRef}
+      >
         {children}
 
         {/* footer */}

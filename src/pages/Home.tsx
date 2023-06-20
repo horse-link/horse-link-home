@@ -5,22 +5,33 @@ import { BsMouseFill } from "react-icons/bs";
 const Home: React.FC = () => (
   <HomeComponents.GrayBackground>
     {/* introduction section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
-      <h1 className="text-lg font-extrabold text-hl-home-text-gray">
+    <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
+      <h1 className="font-extrabold text-hl-home-text-gray lg:text-lg">
         INTRODUCING HORSELINK
       </h1>
-      <span className="block font-basement text-7xl font-extrabold">
+      <span className="block font-basement text-3xl font-extrabold leading-[45px] lg:text-7xl lg:leading-normal">
         WHERE CRYPTO AND RACING COME TOGETHER
       </span>
-      <p className="text-2xl">
+      <p className="leading-[28px] lg:text-2xl lg:leading-normal">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua
       </p>
+
+      {/* mobile image */}
+      <img
+        src="/images/Dashboard.png"
+        alt="A screenshot of the Horse Link dashboard"
+        width={329}
+        height={174}
+        className="block lg:hidden"
+      />
+
       <div className="my-10">
         <HomeComponents.FunkyLink to="/register">
           REGISTER FOR TOURNAMENT
         </HomeComponents.FunkyLink>
       </div>
+
       {/* non-mobile image */}
       <img
         src="/images/Dashboard.png"
@@ -29,14 +40,13 @@ const Home: React.FC = () => (
         height={576}
         className="hidden lg:block"
       />
-      {/* mobile image goes here */}
-      {/* ... */}
+
       <BsMouseFill
         size={48}
         color="#ff431c" // color is hl-secondary in tailwind config
-        className="mt-12 animate-bounce"
+        className="mt-12 hidden animate-bounce lg:block"
       />
-      <p className="text-xs font-extrabold text-hl-home-text-gray">
+      <p className="hidden text-xs font-extrabold text-hl-home-text-gray lg:block">
         SCROLL TO EXPLORE
       </p>
     </section>
@@ -46,7 +56,7 @@ const Home: React.FC = () => (
       <h2 className="font-basement text-6xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
-      <div className="flex gap-x-12 overflow-x-scroll py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem]">
+      <div className="flex w-[90vw] gap-x-12 overflow-x-scroll py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem]">
         <div className="w-[28rem] shrink-0 grow-0">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
