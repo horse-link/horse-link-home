@@ -7,14 +7,22 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { RiFacebookFill } from "react-icons/ri";
 
 export const Footer: React.FC = () => (
-  <footer className="relative flex w-full flex-col items-center overflow-hidden bg-hl-scrollbar-background py-32">
+  <footer className="relative flex w-[95vw] flex-col items-center pt-32 pb-10 lg:w-full lg:overflow-hidden lg:bg-hl-scrollbar-background lg:pb-32">
     {/* main footer content */}
-    <div className="relative z-50 w-[90rem]">
-      <div className="flex items-center justify-between">
-        <h3 className="font-basement text-3xl">
+    <div className="relative z-50 w-full lg:w-[90rem]">
+      <div className="flex flex-col justify-between lg:flex-row lg:items-center">
+        <h3 className="font-basement text-xl lg:text-3xl">
           HORSE<span className="text-hl-secondary">LINK</span>
         </h3>
-        <div className="flex w-fit gap-x-10 font-extrabold">
+
+        {/* non-desktop image */}
+        <img
+          src="/images/horse.webp"
+          alt="Horse Link logo"
+          className="my-4 block max-w-[69px] lg:hidden"
+        />
+
+        <div className="mt-10 flex w-fit flex-col gap-10 text-lg font-extrabold lg:mt-0 lg:flex-row lg:text-base">
           <Link to="/community">Community</Link>
           <Link to="/technology">Technology</Link>
           <Link to="/about">About Us</Link>
@@ -22,16 +30,19 @@ export const Footer: React.FC = () => (
           <Link to="/contact">Contact</Link>
         </div>
       </div>
+
+      {/* desktop image */}
       <img
         src="/images/horse.webp"
-        className="mt-10 max-w-[101px]"
+        className="mt-10 hidden max-w-[101px] lg:block"
         alt="Horse Link logo"
       />
-      <div className="mt-20 flex items-center justify-between text-hl-home-text-gray">
-        <span className="block">
+
+      <div className="mt-20 flex flex-col-reverse items-center justify-between gap-y-10 text-hl-home-text-gray lg:flex-row lg:gap-y-0">
+        <span className="block text-sm lg:text-base">
           &copy; 2023 HorseLink. All rights reserved.
         </span>
-        <div className="flex items-center gap-x-10">
+        <div className="flex items-center gap-x-8 lg:gap-x-10">
           <Link
             to="/"
             className="block rounded-full bg-hl-home-card-background p-3"
@@ -71,7 +82,7 @@ export const Footer: React.FC = () => (
     </div>
 
     {/* background graphic */}
-    <div className="absolute top-0 w-full">
+    <div className="absolute top-0 hidden w-full lg:block">
       <img
         src="/images/FooterGraphic.png"
         alt="A complex background graphic for the footer"

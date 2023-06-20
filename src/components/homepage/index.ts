@@ -6,3 +6,4 @@ export * from "./FunkyCard";
 export * from "./Quote";
 export * from "./Header";
 export * from "./Footer";
+export * from "./CTA";
