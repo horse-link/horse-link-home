@@ -52,7 +52,7 @@ const Home: React.FC = () => (
     </section>
 
     {/* info cards section */}
-    <section className="flex w-[95vw] flex-col items-center gap-y-10 py-48 text-center lg:w-full lg:gap-y-48">
+    <section className="flex w-[95vw] flex-col items-center gap-y-10 py-20 text-center lg:w-full lg:gap-y-48 lg:py-48">
       <h2 className="font-basement text-2xl leading-[40px] lg:text-6xl lg:leading-normal">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
@@ -99,17 +99,17 @@ const Home: React.FC = () => (
     </section>
 
     {/* phone section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
-      <div className="grid grid-cols-2 grid-rows-2 lg:w-[90rem]">
-        <div className="w-full pt-20 text-left">
-          <h2 className="font-basement text-6xl leading-[72px]">
+    <section className="flex w-[95vw] flex-col items-center gap-y-6 text-center lg:w-full lg:pt-32">
+      <div className="flex grid-cols-2 grid-rows-2 flex-col items-center lg:grid lg:w-[90rem]">
+        <div className="w-full text-left lg:pt-20">
+          <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-[72px]">
             Lorem ipsum dolor sit amet
           </h2>
-          <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
           </p>
-          <ul className="mt-10 flex flex-col gap-y-4 text-xl">
+          <ul className="mt-10 flex flex-col gap-y-4 text-sm lg:text-xl">
             <li className="flex items-center gap-x-4">
               <img
                 src="/images/Bullet.png"
@@ -138,13 +138,14 @@ const Home: React.FC = () => (
               Lorem ipsum dolor sit amet, consectetur
             </li>
           </ul>
-          <div className="mt-20 flex w-full items-center gap-x-10">
+          <div className="mt-20 hidden w-full items-center gap-x-10 lg:flex">
             <HomeComponents.FunkyLink to="/">
               LAUNCH APP
             </HomeComponents.FunkyLink>
             <p className="text-lg text-hl-secondary">Read the docs</p>
           </div>
         </div>
+
         <div className="flex w-full justify-end">
           {/* non-mobile */}
           <img
@@ -155,6 +156,7 @@ const Home: React.FC = () => (
             className="hidden lg:block"
           />
         </div>
+
         {/* non-mobile */}
         <img
           src="/images/PhoneTwo.png"
@@ -163,15 +165,16 @@ const Home: React.FC = () => (
           height={722}
           className="hidden lg:block"
         />
+
         <div className="w-full pt-20 text-left">
-          <h2 className="font-basement text-6xl leading-[72px]">
+          <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-[72px]">
             Lorem ipsum dolor sit amet
           </h2>
-          <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
           </p>
@@ -186,8 +189,8 @@ const Home: React.FC = () => (
     </section>
 
     {/* stats section */}
-    <section className="flex w-full flex-col items-center gap-y-6 pt-32 text-center">
-      <div className="flex justify-evenly rounded-3xl bg-hl-home-card-background py-10 lg:w-[90rem]">
+    <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
+      <div className="flex w-full flex-col items-center justify-evenly gap-y-10 rounded-3xl bg-hl-home-card-background py-20 lg:w-[90rem] lg:flex-row lg:py-10">
         <div className="text-center">
           <h2 className="font-basement text-3xl">$110M</h2>
           <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>

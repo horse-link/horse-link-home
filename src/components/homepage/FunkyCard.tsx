@@ -8,7 +8,7 @@ type Props = {
 
 export const FunkyCard: React.FC<Props> = ({ title, body }) => (
   <div className="relative h-fit w-full text-left">
-    <div className="funky-card relative z-50 rounded-3xl bg-hl-home-card-background px-10 pt-44 pb-10">
+    <div className="funky-card relative z-50 rounded-3xl bg-hl-home-card-background px-10 pt-24 pb-10 lg:pt-44">
       <h3 className="font-basement text-3xl">{title}</h3>
       <p className="mt-4 text-lg leading-[36px] text-hl-home-card-body">
         {body}
