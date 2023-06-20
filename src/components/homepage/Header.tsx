@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
   return (
     <React.Fragment>
       {/* header */}
-      <header className="fixed top-0 z-[100] flex w-full items-center justify-between py-10 px-4 lg:px-14">
+      <header className="fixed top-0 z-[100] flex w-full items-center justify-between px-4 pt-4 lg:py-10 lg:px-14">
         <Link to="/" className="block font-basement text-lg lg:text-3xl">
           HORSE<span className="text-hl-secondary">LINK</span>
         </Link>
