@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
   return (
     <React.Fragment>
       {/* header */}
-      <header className="absolute top-0 z-[100] flex w-full items-center justify-between py-10 px-4 lg:fixed lg:px-14">
+      <header className="fixed top-0 z-[100] flex w-full items-center justify-between py-10 px-4 lg:px-14">
         <Link to="/" className="block font-basement text-lg lg:text-3xl">
           HORSE<span className="text-hl-secondary">LINK</span>
         </Link>
@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
             className="rounded-md border-[3px] border-hl-secondary bg-hl-home-background py-[6px] px-4"
             onClick={toggleMenu}
           >
-            {menuOpen ? "CLOSE" : "OPEN"}
+            {menuOpen ? "CLOSE" : "MENU"}
           </button>
           <FunkyLink to="https://alpha.horse.link" small>
             LAUNCH APP
@@ -42,8 +42,8 @@ export const Header: React.FC = () => {
           }
         )}
       >
-        <div className="relative z-50 grid w-[90rem] grid-cols-2 grid-rows-1 font-basement text-6xl text-hl-home-text-gray-2">
-          <div className="flex flex-col gap-y-20">
+        <div className="relative z-50 mt-[6rem] flex w-[95vw] grid-cols-2 grid-rows-1 flex-col px-6 font-basement text-3xl text-hl-home-text-gray-2 lg:mt-0 lg:grid lg:w-[90rem] lg:px-0 lg:text-6xl">
+          <div className="flex flex-col gap-y-8 lg:gap-y-20">
             <Link to="/" className="hover:text-hl-primary">
               Home
             </Link>
@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
               Technology
             </Link>
           </div>
-          <div className="flex flex-col gap-y-20">
+          <div className="mt-8 flex flex-col gap-y-8 lg:gap-y-20">
             <Link to="/about" className="hover:text-hl-primary">
               About Us
             </Link>
@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative z-50 mt-[20rem] flex w-[90rem] items-center justify-between">
+        <div className="relative z-50 mt-[16rem] flex w-full flex-col items-center justify-between lg:mt-[20rem] lg:w-[90rem] lg:flex-row">
           <div className="flex items-center gap-x-10">
             <Link
               to="/"
@@ -102,7 +102,7 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          <div className="w-fit">
+          <div className="mt-6 w-[95vw] px-6 lg:mt-0 lg:w-fit lg:px-0">
             <h3 className="text-hl-home-text-gray-2">Email</h3>
             <p>support@horse.link</p>
           </div>
@@ -113,6 +113,7 @@ export const Header: React.FC = () => {
           <img
             src="/images/MenuGraphic.png"
             alt="A background graphic for the menu"
+            className="hidden lg:block"
           />
         </div>
       </div>
