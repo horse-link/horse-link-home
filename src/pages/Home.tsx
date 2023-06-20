@@ -52,42 +52,44 @@ const Home: React.FC = () => (
     </section>
 
     {/* info cards section */}
-    <section className="flex w-full flex-col items-center gap-y-48 py-48 text-center">
-      <h2 className="font-basement text-6xl">
+    <section className="flex w-[95vw] flex-col items-center gap-y-10 py-48 text-center lg:w-full lg:gap-y-48">
+      <h2 className="font-basement text-2xl leading-[40px] lg:text-6xl lg:leading-normal">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
-      <div className="flex w-[90vw] gap-x-12 overflow-x-scroll py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem]">
-        <div className="w-[28rem] shrink-0 grow-0">
+      <div className="flex w-full flex-col gap-10 py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem] lg:flex-row lg:gap-12 lg:overflow-x-scroll">
+        <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
-        <div className="w-[28rem] shrink-0 grow-0">
+        <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
-        <div className="w-[28rem] shrink-0 grow-0">
+        <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
-        <div className="w-[28rem] shrink-0 grow-0">
+
+        {/* hidden on mobile */}
+        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
-        <div className="w-[28rem] shrink-0 grow-0">
+        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
         </div>
-        <div className="w-[28rem] shrink-0 grow-0">
+        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
