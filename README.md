@@ -1,4 +1,4 @@
-# Horse Link
+# Horse:Link
 
 HorseLink is a token-powered liquidity platform that connects lenders, bookkeepers, punters
 and speculators together. Lenders fund vaults, which in turn finances a bookkeepers position,
