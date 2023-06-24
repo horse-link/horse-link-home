@@ -73,7 +73,7 @@ const Home: React.FC = () => (
         </div>
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
+            title="Market size"
             body="Worldwide prize money for horse racing reaches USD 3.5 billion annually with global betting industry for horse racing generating over USD 116 billion in revenue every year."
           />
         </div>
@@ -108,7 +108,7 @@ const Home: React.FC = () => (
             Mobile dApp
           </h2>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-            With horse link's inbuilt wallet, theres no need to install metamask.
+            With Horse Link's html wallet, theres no need to install metamask.
           </p>
           <ul className="mt-10 flex flex-col gap-y-4 text-sm lg:text-xl">
             <li className="flex items-center gap-x-4">
@@ -197,16 +197,16 @@ const Home: React.FC = () => (
           <p className="text-lg text-hl-home-text-gray">TVL</p>
         </div>
         <div className="text-center">
-          <h2 className="font-basement text-3xl">$110M</h2>
-          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+          <h2 className="font-basement text-3xl">1,000</h2>
+          <p className="text-lg text-hl-home-text-gray">Avg. bets per hour</p>
+        </div>
+        <div className="text-center">
+          <h2 className="font-basement text-3xl">7%</h2>
+          <p className="text-lg text-hl-home-text-gray">Avg. yeild</p>
         </div>
         <div className="text-center">
           <h2 className="font-basement text-3xl">$110M</h2>
-          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
-        </div>
-        <div className="text-center">
-          <h2 className="font-basement text-3xl">$110M</h2>
-          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+          <p className="text-lg text-hl-home-text-gray">Avg. market size</p>
         </div>
       </div>
     </section>
@@ -215,35 +215,36 @@ const Home: React.FC = () => (
     <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
       <div className="w-full lg:w-[90rem]">
         <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-normal">
-          Lorem ipsum dolor sit
+          Problem
         </h2>
         <p className="mt-4 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Despite the size of the industry, advancements in the way sports
+          betting is handled has not evolved significantly for decades.
         </p>
         <div className="mt-20 flex grid-cols-3 grid-rows-2 flex-col items-center gap-14 lg:grid">
           <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Despite the size of the industry, advancements in the way sports betting is handled has not evolved significantly for decades."
+            title="Hi fees"
+            body="Options for online betting are limited to a few global players, with high fees and the need to transact in fiat."
+          />
+          <HomeComponents.FunkyCard
+            title="Defi"
+            body="Furthermore, these advancements in the crypto sector has led to the explosive growth of an entirely new category called decentralized finance (DeFi)."
+          />
+          <HomeComponents.FunkyCard
+            title="Global TVL"
+            body="Currently there's nearly USD 51 billion in total value locked (TVL) in DeFi protocols."
           />
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            body="This limits accessibility and growth which stalls demand and limits the size of the industry."
           />
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            body="This evolution in finance has enabled new sources of lending and liquidity."
           />
           <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            title="Our vision"
+            body="We believe that when combined with the horse racing and sports betting industries, the liquidity can help drive significant expansion in the market."
           />
         </div>
       </div>
@@ -254,9 +255,7 @@ const Home: React.FC = () => (
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between py-10">
           <div className="text-left">
-            <h2 className="font-basement text-6xl">
-              Lorem ipsum dolor sit amet
-            </h2>
+            <h2 className="font-basement text-6xl">Features</h2>
             <p className="mt-10 text-2xl text-hl-home-text-gray-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt.
