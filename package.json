@@ -1,7 +1,7 @@
 {
   "name": "horse-link-splash-page",
   "version": "1.0.0",
-  "description": "Splash page for Horse Link",
+  "description": "Homepage for Horse Link",
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",

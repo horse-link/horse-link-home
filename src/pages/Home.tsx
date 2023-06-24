@@ -13,8 +13,10 @@ const Home: React.FC = () => (
         WHERE CRYPTO AND RACING COME TOGETHER
       </span>
       <p className="leading-[28px] lg:text-2xl lg:leading-normal">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua
+        HorseLink is a decentralized finance platform that enables bookmakers to
+        borrow against their book of wagers from a pool of lender supplied
+        capital. Lenders receive competitive interest, and the platform charges
+        a fee to facilitate the transaction.
       </p>
 
       {/* mobile image */}
@@ -54,25 +56,25 @@ const Home: React.FC = () => (
     {/* info cards section */}
     <section className="flex w-[95vw] flex-col items-center gap-y-10 py-20 text-center lg:w-full lg:gap-y-48 lg:py-48">
       <h2 className="font-basement text-2xl leading-[40px] lg:text-6xl lg:leading-normal">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        Market opportunity
       </h2>
       <div className="flex w-full flex-col gap-10 py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem] lg:flex-row lg:gap-12 lg:overflow-x-scroll">
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            title="Market opportunity"
+            body="Horse racing has an estimated global annual economic impact of around USD 300 billion."
           />
         </div>
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            body="Europe and USA account for over two-thirds of this market; with a greater economic impact than the motion picture industry."
           />
         </div>
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            body="Worldwide prize money for horse racing reaches USD 3.5 billion annually with global betting industry for horse racing generating over USD 116 billion in revenue every year."
           />
         </div>
 
@@ -103,11 +105,10 @@ const Home: React.FC = () => (
       <div className="flex grid-cols-2 grid-rows-2 flex-col items-center lg:grid lg:w-[90rem]">
         <div className="w-full text-left lg:pt-20">
           <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-[72px]">
-            Lorem ipsum dolor sit amet
+            Mobile dApp
           </h2>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
+            With horse link's inbuilt wallet, theres no need to install metamask.
           </p>
           <ul className="mt-10 flex flex-col gap-y-4 text-sm lg:text-xl">
             <li className="flex items-center gap-x-4">
@@ -193,7 +194,7 @@ const Home: React.FC = () => (
       <div className="flex w-full flex-col items-center justify-evenly gap-y-10 rounded-3xl bg-hl-home-card-background py-20 lg:w-[90rem] lg:flex-row lg:py-10">
         <div className="text-center">
           <h2 className="font-basement text-3xl">$110M</h2>
-          <p className="text-lg text-hl-home-text-gray">Avg. daily gas saved</p>
+          <p className="text-lg text-hl-home-text-gray">TVL</p>
         </div>
         <div className="text-center">
           <h2 className="font-basement text-3xl">$110M</h2>
@@ -222,7 +223,7 @@ const Home: React.FC = () => (
         <div className="mt-20 flex grid-cols-3 grid-rows-2 flex-col items-center gap-14 lg:grid">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            body="Despite the size of the industry, advancements in the way sports betting is handled has not evolved significantly for decades."
           />
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
