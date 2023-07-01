@@ -67,7 +67,7 @@ const Home: React.FC = () => (
         </div>
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
+            title="Global"
             body="Europe and USA account for over two-thirds of this market; with a greater economic impact than the motion picture industry."
           />
         </div>
@@ -79,7 +79,7 @@ const Home: React.FC = () => (
         </div>
 
         {/* hidden on mobile */}
-        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
+        {/* <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
           <HomeComponents.FunkyCard
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
@@ -96,7 +96,7 @@ const Home: React.FC = () => (
             title="Lorem ipsum dolor sit amet"
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           />
-        </div>
+        </div> */}
       </div>
     </section>
 
@@ -108,7 +108,8 @@ const Home: React.FC = () => (
             Mobile dApp
           </h2>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-            With Horse Link's html wallet, theres no need to install metamask.
+            With Horse Link's non custodial html wallet, theres no need to
+            install metamask.
           </p>
           <ul className="mt-10 flex flex-col gap-y-4 text-sm lg:text-xl">
             <li className="flex items-center gap-x-4">
@@ -118,7 +119,7 @@ const Home: React.FC = () => (
                 width={32}
                 height={32}
               />
-              Lorem ipsum dolor sit amet, consectetur
+              Responsive mobile design
             </li>
             <li className="flex items-center gap-x-4">
               <img
@@ -127,7 +128,7 @@ const Home: React.FC = () => (
                 width={32}
                 height={32}
               />
-              Lorem ipsum dolor sit amet, consectetur
+              No download required
             </li>
             <li className="flex items-center gap-x-4">
               <img
@@ -136,14 +137,18 @@ const Home: React.FC = () => (
                 width={32}
                 height={32}
               />
-              Lorem ipsum dolor sit amet, consectetur
+              No third party wallets
             </li>
           </ul>
           <div className="mt-20 hidden w-full items-center gap-x-10 lg:flex">
-            <HomeComponents.FunkyLink to="/">
+            <HomeComponents.FunkyLink to="https://alpha.horse.link">
               LAUNCH APP
             </HomeComponents.FunkyLink>
-            <p className="text-lg text-hl-secondary">Read the docs</p>
+            <p className="text-lg text-hl-secondary">
+              <a href="https://github.com/horse-link/horse-link-splash-page/blob/main/HorseLink%20Deck%20v1.1.pdf">
+                Read the docs
+              </a>
+            </p>
           </div>
         </div>
 
@@ -169,21 +174,24 @@ const Home: React.FC = () => (
 
         <div className="w-full pt-20 text-left">
           <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-[72px]">
-            Lorem ipsum dolor sit amet
+            How it works
           </h2>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lenders loan stablecoins such as USDC to vaults in return for
+            interest they receive in HL.
           </p>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Bookmakers borrow from these vaults and pay interest in HL to do so.
           </p>
           <div className="mt-20 flex w-full items-center gap-x-10">
-            <HomeComponents.FunkyLink to="/">
+            <HomeComponents.FunkyLink to="https://alpha.horse.link">
               LAUNCH APP
             </HomeComponents.FunkyLink>
-            <p className="text-lg text-hl-secondary">Read the docs</p>
+            <p className="text-lg text-hl-secondary">
+              <a href="https://github.com/horse-link/horse-link-splash-page/blob/main/HorseLink%20Deck%20v1.1.pdf">
+                Read the docs
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -257,29 +265,29 @@ const Home: React.FC = () => (
           <div className="text-left">
             <h2 className="font-basement text-6xl">Features</h2>
             <p className="mt-10 text-2xl text-hl-home-text-gray-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              Allows markets to form for each bookmaker based on their
+              individual risk profiles.
             </p>
           </div>
 
-          <div className="w-[20rem]">
+          {/* <div className="w-[20rem]">
             <HomeComponents.FunkyLink to="/">
               VIEW ALL POSTS
             </HomeComponents.FunkyLink>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex w-full flex-col gap-y-6 px-12">
           <HomeComponents.FunkyWideCard
-            title="Lorem ipsum dolor sit amet"
+            title="Rating System"
             image="/images/GraphicOne.png"
           />
           <HomeComponents.FunkyWideCard
-            title="Lorem ipsum dolor sit amet"
+            title="Escrow Contracts"
             image="/images/GraphicTwo.png"
           />
           <HomeComponents.FunkyWideCard
-            title="Lorem ipsum dolor sit amet"
+            title="NFT Marketplace"
             image="/images/GraphicThree.png"
           />
         </div>
@@ -289,7 +297,7 @@ const Home: React.FC = () => (
     {/* quotes section */}
     <section className="flex w-[95vw] flex-col items-center gap-y-6 text-center lg:w-full lg:pt-32">
       <div className="flex w-full flex-col items-center justify-center gap-20 pt-14 lg:flex-row lg:bg-hl-home-card-background lg:py-32">
-        <HomeComponents.Quote
+        {/* <HomeComponents.Quote
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
           author={{
             img: "/images/AvatarOne.png",
@@ -312,7 +320,7 @@ const Home: React.FC = () => (
             name: "Ethan Jordan",
             position: "Blockchain Analyst - Enzotech"
           }}
-        />
+        /> */}
       </div>
     </section>
 
