@@ -22,3 +22,12 @@ HorseLink leverages decentralized smart contracts to escrow funds securely and u
 * Currently there’s nearly USD 51 billion in total value locked (TVL) in DeFi protocols.
 * This evolution in finance has enabled new sources of lending and liquidity.
 * We believe that when combined with the horse racing and sports betting industries, the liquidity can help drive significant expansion in the market.
+
+## The solution
+
+HorseLink is a protocol that leverages DeFi to provide newfound lending and liquidity to bookmakers in the horse racing and sports betting industry.
+
+* By providing more liquidity, bookmakers can increase the volume and size of their book, expanding access in the industry.
+* HorseLink also enables simplified and decentralized access to betting, greatly opening up accessibility to the crypto markets.
+* HorseLink is powered by its ERC-20 token “HL” which operates on the Ethereum ecosystem to enable punters and speculators to place bets.
+* Speculators can also resell their bets on the secondary market.
