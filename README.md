@@ -11,3 +11,14 @@ HorseLink leverages decentralized smart contracts to escrow funds securely and u
 * Europe and USA account for over two-thirds of this market; with a greater economic impact than the motion picture industry.
 * Worldwide prize money for horse racing reaches USD 3.5 billion annually with global betting industry for horse racing generating over USD 116 billion in revenue every year.
 * Sports betting, too, contributes significantly to the economy, adding nearly USD 87 billion in 2022 with a projected CAGR over 10.3% through 2030.
+
+## Problem
+
+* Despite the size of the industry, advancements in the way sports betting is handled has not evolved significantly for decades.
+* Options for online betting are limited to a few global players, with high fees and the need to transact in fiat.
+* This limits accessibility and growth which stalls demand and limits the size of the industry.
+* However, today, significant advancements in blockchain technologies enable the use of cryptographic tokens to transfer, and lend value – opening up a new cohort of potential players.
+* Furthermore, these advancements in the crypto sector has led to the explosive growth of an entirely new category called decentralized finance (DeFi).
+* Currently there’s nearly USD 51 billion in total value locked (TVL) in DeFi protocols.
+* This evolution in finance has enabled new sources of lending and liquidity.
+* We believe that when combined with the horse racing and sports betting industries, the liquidity can help drive significant expansion in the market.
