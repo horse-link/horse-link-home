@@ -16,7 +16,7 @@ export const FunkyLink: React.FC<Props> = ({ children, to, small = false }) => {
       href={to}
       target="_blank"
       rel="noopener noreferrer"
-      className="funky-clip block rounded-md bg-hl-secondary px-1 py-[3px] transition-all duration-100 hover:scale-[1.05]"
+      className="funky-clip block w-fit rounded-md bg-hl-secondary px-1 py-[3px] transition-all duration-100 hover:scale-[1.05]"
     >
       <span
         className={classNames(
@@ -33,7 +33,7 @@ export const FunkyLink: React.FC<Props> = ({ children, to, small = false }) => {
   ) : (
     <Link
       to={to}
-      className="funky-clip block rounded-md bg-hl-secondary px-1 py-[3px] transition-all duration-100 hover:scale-[1.05]"
+      className="funky-clip block w-fit rounded-md bg-hl-secondary px-1 py-[3px] transition-all duration-100 hover:scale-[1.05]"
     >
       <span
         className={classNames(

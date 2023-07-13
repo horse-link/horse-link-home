@@ -6,7 +6,8 @@ import { BsDiscord } from "react-icons/bs";
 import { SiTwitter } from "react-icons/si";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
-import { RiFacebookFill } from "react-icons/ri";
+import { RiFacebookFill, RiCloseFill } from "react-icons/ri";
+import { MenuGroup } from "../../assets";
 
 export const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,10 +22,14 @@ export const Header: React.FC = () => {
         </Link>
         <div className="flex items-center gap-x-4">
           <button
-            className="rounded-md border-[3px] border-hl-secondary bg-hl-home-background py-[6px] px-4"
+            className="rounded-md border-[3px] border-hl-secondary bg-hl-home-background py-[10px] px-4"
             onClick={toggleMenu}
           >
-            {menuOpen ? "CLOSE" : "MENU"}
+            {menuOpen ? (
+              <RiCloseFill className="scale-[2]" width={16} height={16} />
+            ) : (
+              <img src={MenuGroup} width={16} height={16} />
+            )}
           </button>
           <FunkyLink to="https://alpha.horse.link" small>
             LAUNCH APP
@@ -54,7 +59,7 @@ export const Header: React.FC = () => {
               Technology
             </Link>
           </div>
-          <div className="mt-8 flex flex-col gap-y-8 lg:gap-y-20">
+          <div className="mt-8 flex flex-col gap-y-8 lg:mt-0 lg:gap-y-20">
             <Link to="/about" className="hover:text-hl-primary">
               About Us
             </Link>
@@ -104,7 +109,12 @@ export const Header: React.FC = () => {
 
           <div className="mt-6 w-[95vw] px-6 lg:mt-0 lg:w-fit lg:px-0">
             <h3 className="text-hl-home-text-gray-2">Email</h3>
-            <p>support@horse.link</p>
+            <a
+              href="mailto:support@horse.link"
+              className="underline-offset-2 hover:underline"
+            >
+              support@horse.link
+            </a>
           </div>
         </div>
 

@@ -9,14 +9,19 @@ const Home: React.FC = () => (
       <h1 className="font-extrabold text-hl-home-text-gray lg:text-lg">
         INTRODUCING HORSELINK
       </h1>
-      <span className="block font-basement text-3xl font-extrabold leading-[45px] lg:text-7xl lg:leading-normal">
-        WHERE CRYPTO AND RACING COME TOGETHER
+      <span className="block font-basement text-3xl font-extrabold leading-[45px] lg:text-7xl lg:leading-[1.2]">
+        WHERE CRYPTO AND
+        <br className="hidden lg:block" />
+        RACING COME TOGETHER
       </span>
-      <p className="leading-[28px] lg:text-2xl lg:leading-normal">
-        HorseLink is a decentralized finance platform that enables bookmakers to
-        borrow against their book of wagers from a pool of lender supplied
-        capital. Lenders receive competitive interest, and the platform charges
-        a fee to facilitate the transaction.
+      <p className="leading-[28px] lg:text-lg lg:leading-[36px]">
+        HorseLink is a decentralised finance platform that enables bookmakers to
+        borrow against
+        <br className="hidden lg:block" />
+        their book of wagers from a pool of lender supplied capital. Lenders
+        receive competitive
+        <br className="hidden lg:block" />
+        interest, and the platform charges a fee to facilitate the transaction.
       </p>
 
       {/* mobile image */}
@@ -56,12 +61,12 @@ const Home: React.FC = () => (
     {/* info cards section */}
     <section className="flex w-[95vw] flex-col items-center gap-y-10 py-20 text-center lg:w-full lg:gap-y-48 lg:py-48">
       <h2 className="font-basement text-2xl leading-[40px] lg:text-6xl lg:leading-normal">
-        Market opportunity
+        Market Opportunity
       </h2>
       <div className="flex w-full flex-col gap-10 py-4 scrollbar-thin scrollbar-track-hl-scrollbar-background scrollbar-thumb-hl-home-background-bars scrollbar-track-rounded-full scrollbar-thumb-rounded-full lg:max-w-[90rem] lg:flex-row lg:gap-12 lg:overflow-x-scroll">
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
-            title="Market opportunity"
+            title="Market Opportunity"
             body="Horse racing has an estimated global annual economic impact of around USD 300 billion."
           />
         </div>
@@ -73,30 +78,10 @@ const Home: React.FC = () => (
         </div>
         <div className="w-full shrink-0 grow-0 lg:w-[28rem]">
           <HomeComponents.FunkyCard
-            title="Market size"
+            title="Market Size"
             body="Worldwide prize money for horse racing reaches USD 3.5 billion annually with global betting industry for horse racing generating over USD 116 billion in revenue every year."
           />
         </div>
-
-        {/* hidden on mobile */}
-        {/* <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-        </div>
-        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-        </div>
-        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-        </div> */}
       </div>
     </section>
 
@@ -107,11 +92,11 @@ const Home: React.FC = () => (
           <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-[72px]">
             Mobile dApp
           </h2>
-          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
-            With Horse Link's non custodial html wallet, theres no need to
+          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
+            With Horse Link&apos;s non custodial html wallet, theres no need to
             install metamask.
           </p>
-          <ul className="mt-10 flex flex-col gap-y-4 text-sm lg:text-xl">
+          <ul className="mt-10 flex flex-col gap-y-8 text-sm lg:text-xl">
             <li className="flex items-center gap-x-4">
               <img
                 src="/images/Bullet.png"
@@ -174,13 +159,13 @@ const Home: React.FC = () => (
 
         <div className="w-full pt-20 text-left">
           <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-[72px]">
-            How it works
+            How It Works
           </h2>
-          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
+          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
             Lenders loan stablecoins such as USDC to vaults in return for
             interest they receive in HL.
           </p>
-          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
+          <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
             Bookmakers borrow from these vaults and pay interest in HL to do so.
           </p>
           <div className="mt-20 flex w-full items-center gap-x-10">
@@ -210,7 +195,7 @@ const Home: React.FC = () => (
         </div>
         <div className="text-center">
           <h2 className="font-basement text-3xl">7%</h2>
-          <p className="text-lg text-hl-home-text-gray">Avg. yeild</p>
+          <p className="text-lg text-hl-home-text-gray">Avg. yield</p>
         </div>
         <div className="text-center">
           <h2 className="font-basement text-3xl">$110M</h2>
@@ -225,56 +210,40 @@ const Home: React.FC = () => (
         <h2 className="font-basement text-3xl leading-[45px] lg:text-6xl lg:leading-normal">
           Problem
         </h2>
-        <p className="mt-4 leading-[27px] text-hl-home-text-gray-2 lg:text-2xl lg:leading-normal">
+        <p className="mt-4 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
           Despite the size of the industry, advancements in the way sports
-          betting is handled has not evolved significantly for decades.
+          betting
+          <br className="hidden lg:block" />
+          is handled has not evolved significantly for decades.
         </p>
-        <div className="mt-20 flex grid-cols-3 grid-rows-2 flex-col items-center gap-14 lg:grid">
+        <div className="mt-20 flex grid-cols-3 grid-rows-1 flex-col items-center gap-14 lg:grid">
           <HomeComponents.FunkyCard
-            title="Hi fees"
+            title="High Fees"
             body="Options for online betting are limited to a few global players, with high fees and the need to transact in fiat."
           />
           <HomeComponents.FunkyCard
-            title="Defi"
-            body="Furthermore, these advancements in the crypto sector has led to the explosive growth of an entirely new category called decentralized finance (DeFi)."
+            title="DeFi"
+            body="Furthermore, these advancements in the crypto sector has led to the explosive growth of an entirely new category called decentralised finance (DeFi)."
           />
           <HomeComponents.FunkyCard
             title="Global TVL"
             body="Currently there's nearly USD 51 billion in total value locked (TVL) in DeFi protocols."
           />
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="This limits accessibility and growth which stalls demand and limits the size of the industry."
-          />
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="This evolution in finance has enabled new sources of lending and liquidity."
-          />
-          <HomeComponents.FunkyCard
-            title="Our vision"
-            body="We believe that when combined with the horse racing and sports betting industries, the liquidity can help drive significant expansion in the market."
-          />
         </div>
       </div>
     </section>
 
-    {/* article? section (hidden on mobile) */}
+    {/* features section */}
     <section className="hidden w-full flex-col items-center gap-y-6 pt-52 text-center lg:flex">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between py-10">
           <div className="text-left">
             <h2 className="font-basement text-6xl">Features</h2>
-            <p className="mt-10 text-2xl text-hl-home-text-gray-2">
+            <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
               Allows markets to form for each bookmaker based on their
               individual risk profiles.
             </p>
           </div>
-
-          {/* <div className="w-[20rem]">
-            <HomeComponents.FunkyLink to="/">
-              VIEW ALL POSTS
-            </HomeComponents.FunkyLink>
-          </div> */}
         </div>
 
         <div className="flex w-full flex-col gap-y-6 px-12">
@@ -293,37 +262,6 @@ const Home: React.FC = () => (
         </div>
       </div>
     </section>
-
-    {/* quotes section */}
-    <section className="flex w-[95vw] flex-col items-center gap-y-6 text-center lg:w-full lg:pt-32">
-      <div className="flex w-full flex-col items-center justify-center gap-20 pt-14 lg:flex-row lg:bg-hl-home-card-background lg:py-32">
-        {/* <HomeComponents.Quote
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          author={{
-            img: "/images/AvatarOne.png",
-            name: "Markus Freeman",
-            position: "Dev Ops - Azious"
-          }}
-        />
-        <HomeComponents.Quote
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          author={{
-            img: "/images/AvatarTwo.png",
-            name: "Becky Stal",
-            position: "Sr. Engineer - FauxChain"
-          }}
-        />
-        <HomeComponents.Quote
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          author={{
-            img: "/images/AvatarThree.png",
-            name: "Ethan Jordan",
-            position: "Blockchain Analyst - Enzotech"
-          }}
-        /> */}
-      </div>
-    </section>
-
     <HomeComponents.CTA />
   </HomeComponents.GrayBackground>
 );

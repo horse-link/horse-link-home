@@ -80,14 +80,5 @@ export const Footer: React.FC = () => (
         </div>
       </div>
     </div>
-
-    {/* background graphic */}
-    <div className="absolute top-0 hidden w-full lg:block">
-      <img
-        src="/images/FooterGraphic.png"
-        alt="A complex background graphic for the footer"
-        className="w-full"
-      />
-    </div>
   </footer>
 );

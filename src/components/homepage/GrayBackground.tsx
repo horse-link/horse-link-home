@@ -2,12 +2,17 @@ import React, { useCallback, useState } from "react";
 import { Bars } from "./Bars";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { useLocation } from "react-router-dom";
+import classNames from "classnames";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export const GrayBackground: React.FC<Props> = ({ children }) => {
+  const { pathname } = useLocation();
+  const isHomePage = pathname === "/";
+
   const [contentContainerHeight, setContentContainerHeight] = useState(0);
 
   const contentContainerRef = useCallback((divNode: HTMLDivElement | null) => {
@@ -31,7 +36,11 @@ export const GrayBackground: React.FC<Props> = ({ children }) => {
       </div>
 
       {/* background graphic */}
-      <div className="absolute top-0 z-[49] w-full">
+      <div
+        className={classNames("absolute top-0 z-[49] w-full", {
+          "hidden lg:block": !isHomePage
+        })}
+      >
         <img
           src="/images/BackgroundGraphic.png"
           className="mt-14 w-full"
