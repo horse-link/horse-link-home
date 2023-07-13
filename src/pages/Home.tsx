@@ -82,26 +82,6 @@ const Home: React.FC = () => (
             body="Worldwide prize money for horse racing reaches USD 3.5 billion annually with global betting industry for horse racing generating over USD 116 billion in revenue every year."
           />
         </div>
-
-        {/* hidden on mobile */}
-        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-        </div>
-        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-        </div>
-        <div className="hidden w-[28rem] shrink-0 grow-0 lg:block">
-          <HomeComponents.FunkyCard
-            title="Lorem ipsum dolor sit amet"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          />
-        </div>
       </div>
     </section>
 
@@ -146,10 +126,14 @@ const Home: React.FC = () => (
             </li>
           </ul>
           <div className="mt-20 hidden w-full items-center gap-x-10 lg:flex">
-            <HomeComponents.FunkyLink to="/">
+            <HomeComponents.FunkyLink to="https://alpha.horse.link">
               LAUNCH APP
             </HomeComponents.FunkyLink>
-            <p className="text-lg text-hl-secondary">Read the docs</p>
+            <p className="text-lg text-hl-secondary">
+              <a href="https://github.com/horse-link/horse-link-splash-page/blob/main/HorseLink%20Deck%20v1.1.pdf">
+                Read the docs
+              </a>
+            </p>
           </div>
         </div>
 
@@ -185,10 +169,14 @@ const Home: React.FC = () => (
             Bookmakers borrow from these vaults and pay interest in HL to do so.
           </p>
           <div className="mt-20 flex w-full items-center gap-x-10">
-            <HomeComponents.FunkyLink to="/">
+            <HomeComponents.FunkyLink to="https://alpha.horse.link">
               LAUNCH APP
             </HomeComponents.FunkyLink>
-            <p className="text-lg text-hl-secondary">Read the docs</p>
+            <p className="text-lg text-hl-secondary">
+              <a href="https://github.com/horse-link/horse-link-splash-page/blob/main/HorseLink%20Deck%20v1.1.pdf">
+                Read the docs
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -245,7 +233,7 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    {/* article? section (hidden on mobile) */}
+    {/** */}
     <section className="hidden w-full flex-col items-center gap-y-6 pt-52 text-center lg:flex">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between py-10">
@@ -255,12 +243,6 @@ const Home: React.FC = () => (
               Allows markets to form for each bookmaker based on their
               individual risk profiles.
             </p>
-          </div>
-
-          <div className="w-[20rem]">
-            <HomeComponents.FunkyLink to="/">
-              VIEW ALL POSTS
-            </HomeComponents.FunkyLink>
           </div>
         </div>
 
@@ -280,37 +262,6 @@ const Home: React.FC = () => (
         </div>
       </div>
     </section>
-
-    {/* quotes section */}
-    <section className="flex w-[95vw] flex-col items-center gap-y-6 text-center lg:w-full lg:pt-32">
-      <div className="flex w-full flex-col items-center justify-center gap-20 pt-14 lg:flex-row lg:bg-hl-home-card-background lg:py-32">
-        <HomeComponents.Quote
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          author={{
-            img: "/images/AvatarOne.png",
-            name: "Markus Freeman",
-            position: "Dev Ops - Azious"
-          }}
-        />
-        <HomeComponents.Quote
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          author={{
-            img: "/images/AvatarTwo.png",
-            name: "Becky Stal",
-            position: "Sr. Engineer - FauxChain"
-          }}
-        />
-        <HomeComponents.Quote
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          author={{
-            img: "/images/AvatarThree.png",
-            name: "Ethan Jordan",
-            position: "Blockchain Analyst - Enzotech"
-          }}
-        />
-      </div>
-    </section>
-
     <HomeComponents.CTA />
   </HomeComponents.GrayBackground>
 );
