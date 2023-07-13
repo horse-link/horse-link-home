@@ -11,16 +11,16 @@ const Home: React.FC = () => (
       </h1>
       <span className="block font-basement text-3xl font-extrabold leading-[45px] lg:text-7xl lg:leading-[1.2]">
         WHERE CRYPTO AND
-        <br />
+        <br className="hidden lg:block" />
         RACING COME TOGETHER
       </span>
       <p className="leading-[28px] lg:text-lg lg:leading-[36px]">
         HorseLink is a decentralised finance platform that enables bookmakers to
         borrow against
-        <br />
+        <br className="hidden lg:block" />
         their book of wagers from a pool of lender supplied capital. Lenders
         receive competitive
-        <br />
+        <br className="hidden lg:block" />
         interest, and the platform charges a fee to facilitate the transaction.
       </p>
 
@@ -233,7 +233,7 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    {/** */}
+    {/* features section */}
     <section className="hidden w-full flex-col items-center gap-y-6 pt-52 text-center lg:flex">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between py-10">
