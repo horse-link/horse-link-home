@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
           HORSE<span className="text-hl-secondary">LINK</span>
         </Link>
         <div className="flex items-center gap-x-4">
-          <button
+          {/* <button
             className="rounded-md border-[3px] border-hl-secondary bg-hl-home-background py-[10px] px-4"
             onClick={toggleMenu}
           >
@@ -30,10 +30,14 @@ export const Header: React.FC = () => {
             ) : (
               <img src={MenuGroup} width={16} height={16} />
             )}
-          </button>
-          <FunkyLink to="https://alpha.horse.link" small>
+          </button> */}
+          {/* <FunkyLink to="https://alpha.horse.link" small>
             LAUNCH APP
+          </FunkyLink> */}
+          <FunkyLink to="https://bit.ly/3tXLIHG" small>
+           CONNECT WITH US
           </FunkyLink>
+          
         </div>
       </header>
 

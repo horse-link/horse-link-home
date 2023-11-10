@@ -12,7 +12,7 @@ export const CTA: React.FC = () => (
         <span className="text-hl-secondary">how to build on HorseLink</span>.
       </p>
       <div className="flex w-full justify-center">
-        <FunkyLink to="/">JOIN THE COMMUNITY</FunkyLink>
+        <FunkyLink to="https://bit.ly/3tXLIHG">CONNECT WITH US</FunkyLink>
       </div>
     </div>
 
