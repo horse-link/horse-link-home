@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FunkyLink } from "./FunkyLink";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
@@ -6,12 +6,13 @@ import { BsDiscord } from "react-icons/bs";
 import { SiTwitter } from "react-icons/si";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
-import { RiFacebookFill, RiCloseFill } from "react-icons/ri";
-import { MenuGroup } from "../../assets";
+import { RiFacebookFill } from "react-icons/ri";
+// import { MenuGroup } from "../../assets";
 
 export const Header: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(prev => !prev);
+  const menuOpen = false;
+  // const [menuOpen, setMenuOpen] = useState(false);
+  // const toggleMenu = () => setMenuOpen(prev => !prev);
 
   return (
     <React.Fragment>
