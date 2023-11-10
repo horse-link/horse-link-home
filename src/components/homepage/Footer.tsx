@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsDiscord } from "react-icons/bs";
+// import { BsDiscord } from "react-icons/bs";
 import { SiTwitter } from "react-icons/si";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
-import { RiFacebookFill } from "react-icons/ri";
+// import { AiFillInstagram } from "react-icons/ai";
+// import { FaTelegramPlane } from "react-icons/fa";
+// import { RiFacebookFill } from "react-icons/ri";
 
 export const Footer: React.FC = () => (
   <footer className="relative flex w-[95vw] flex-col items-center pt-32 pb-10 lg:w-full lg:overflow-hidden lg:bg-hl-scrollbar-background lg:pb-32">
