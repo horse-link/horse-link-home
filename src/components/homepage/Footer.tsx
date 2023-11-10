@@ -22,13 +22,13 @@ export const Footer: React.FC = () => (
           className="my-4 block max-w-[69px] lg:hidden"
         />
 
-        <div className="mt-10 flex w-fit flex-col gap-10 text-lg font-extrabold lg:mt-0 lg:flex-row lg:text-base">
+        {/* <div className="mt-10 flex w-fit flex-col gap-10 text-lg font-extrabold lg:mt-0 lg:flex-row lg:text-base">
           <Link to="/community">Community</Link>
           <Link to="/technology">Technology</Link>
           <Link to="/about">About Us</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
-        </div>
+        </div> */}
       </div>
 
       {/* desktop image */}
@@ -43,40 +43,42 @@ export const Footer: React.FC = () => (
           &copy; 2023 HorseLink. All rights reserved.
         </span>
         <div className="flex items-center gap-x-8 lg:gap-x-10">
-          <Link
+          {/* <Link
             to="/"
             className="block rounded-full bg-hl-home-card-background p-3"
           >
             <BsDiscord />
-          </Link>
+          </Link> */}
 
           <Link
-            to="/"
+            to="https://twitter.com/_HORSELINK_"
+            target="_blank"
+            rel="noreferrer noopener"
             className="block rounded-full bg-hl-home-card-background p-3"
           >
             <SiTwitter />
           </Link>
 
-          <Link
+          {/* <Link
             to="/"
             className="block rounded-full bg-hl-home-card-background p-3"
           >
             <AiFillInstagram />
-          </Link>
-
+          </Link> */}
+{/* 
           <Link
             to="/"
             className="block rounded-full bg-hl-home-card-background p-3"
           >
             <FaTelegramPlane />
-          </Link>
+          </Link> */}
 
-          <Link
+          {/* <Link
             to="/"
             className="block rounded-full bg-hl-home-card-background p-3"
           >
             <RiFacebookFill />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

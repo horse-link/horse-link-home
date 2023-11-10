@@ -34,8 +34,11 @@ const Home: React.FC = () => (
       />
 
       <div className="my-10">
-        <HomeComponents.FunkyLink to="/register">
+        {/* <HomeComponents.FunkyLink to="/register">
           REGISTER FOR TOURNAMENT
+        </HomeComponents.FunkyLink> */}
+        <HomeComponents.FunkyLink to="https://bit.ly/3tXLIHG">
+          CONNECT WITH US
         </HomeComponents.FunkyLink>
       </div>
 
@@ -125,7 +128,7 @@ const Home: React.FC = () => (
               No third party wallets
             </li>
           </ul>
-          <div className="mt-20 hidden w-full items-center gap-x-10 lg:flex">
+          {/* <div className="mt-20 hidden w-full items-center gap-x-10 lg:flex">
             <HomeComponents.FunkyLink to="https://alpha.horse.link">
               LAUNCH APP
             </HomeComponents.FunkyLink>
@@ -134,7 +137,7 @@ const Home: React.FC = () => (
                 Read the docs
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex w-full justify-end">
@@ -162,13 +165,13 @@ const Home: React.FC = () => (
             How It Works
           </h2>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
-            Lenders loan stablecoins such as USDC to vaults in return for
+            Lenders loan stablecoins such as USDT to vaults in return for
             interest they receive in HL.
           </p>
           <p className="mt-10 leading-[27px] text-hl-home-text-gray-2 lg:text-xl lg:leading-[36px]">
             Bookmakers borrow from these vaults and pay interest in HL to do so.
           </p>
-          <div className="mt-20 flex w-full items-center gap-x-10">
+          {/* <div className="mt-20 flex w-full items-center gap-x-10">
             <HomeComponents.FunkyLink to="https://alpha.horse.link">
               LAUNCH APP
             </HomeComponents.FunkyLink>
@@ -177,13 +180,13 @@ const Home: React.FC = () => (
                 Read the docs
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
 
     {/* stats section */}
-    <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
+    {/* <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
       <div className="flex w-full flex-col items-center justify-evenly gap-y-10 rounded-3xl bg-hl-home-card-background py-20 lg:w-[90rem] lg:flex-row lg:py-10">
         <div className="text-center">
           <h2 className="font-basement text-3xl">$110M</h2>
@@ -202,7 +205,7 @@ const Home: React.FC = () => (
           <p className="text-lg text-hl-home-text-gray">Avg. market size</p>
         </div>
       </div>
-    </section>
+    </section> */}
 
     {/* more cards section */}
     <section className="flex w-[95vw] flex-col items-center gap-y-6 pt-32 text-center lg:w-full">
@@ -234,7 +237,7 @@ const Home: React.FC = () => (
     </section>
 
     {/* features section */}
-    <section className="hidden w-full flex-col items-center gap-y-6 pt-52 text-center lg:flex">
+    {/* <section className="hidden w-full flex-col items-center gap-y-6 pt-52 text-center lg:flex">
       <div className="grid grid-cols-2 grid-rows-1 lg:w-[90rem]">
         <div className="flex flex-col justify-between py-10">
           <div className="text-left">
@@ -261,7 +264,7 @@ const Home: React.FC = () => (
           />
         </div>
       </div>
-    </section>
+    </section> */}
     <HomeComponents.CTA />
   </HomeComponents.GrayBackground>
 );
